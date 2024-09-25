@@ -1,6 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import PinkButton from '../../common/Buttons/PinkButton';
+import pic1 from '@/public/assets/pic1.svg'
+import pic2 from '@/public/assets/pic2.svg'
+import pic3 from '@/public/assets/pic3.svg'
 
 // Interfaces
 interface Article {
@@ -17,19 +20,19 @@ interface ArticleCardProps {
 // Constants
 const ARTICLES: Article[] = [
   {
-    image: '../assets/StylistAvatar.svg',
+    image: pic1,
     category: 'Consultation',
     title: 'How much does a consultation cost at our clinic?',
     description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
   },
   {
-    image: '/images/unsplash_7tDGb3HrITg.svg',
+    image: pic2,
     category: 'Beauty',
     title: 'Watch out! don\'t choose the wrong beauty product',
     description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',
   },
   {
-    image: '/images/unsplash_0_McYfdyEDA.svg',
+    image: pic3,
     category: 'Treatments',
     title: 'About skin care you need to know',
     description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the…',

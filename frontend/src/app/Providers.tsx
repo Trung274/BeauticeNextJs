@@ -1,18 +1,18 @@
-'use client'
-
-import { Provider } from 'react-redux'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { useState } from 'react'
-import { store } from './store'
+import { AuthProvider } from './context/AuthContext'
+import { Provider as ReduxProvider } from 'react-redux'
+import { store } from './store' 
+
+const queryClient = new QueryClient()
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [queryClient] = useState(() => new QueryClient())
-
   return (
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <QueryClientProvider client={queryClient}>
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </QueryClientProvider>
-    </Provider>
+    </ReduxProvider>
   )
 }
