@@ -1,20 +1,29 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface PinkButtonProps {
-  href: string;
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
   children: React.ReactNode;
 }
 
-const PinkButton: React.FC<PinkButtonProps> = ({ href, children }) => {
+const PinkButton: React.FC<PinkButtonProps> = ({ href, type, onClick, children }) => {
+  const className = "px-10 py-2 border-2 rounded-full border-[#FF64AE] bg-[#FF64AE] text-sm tracking-widest text-white font-semibold h-[52px] hover:scale-105 hover:bg-white hover:text-[#FF64AE] transition-all inline-flex items-center justify-center whitespace-nowrap";
+
+  if (href) {
+    return (
+      <Link href={href} className={className}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link 
-      href={href} 
-      className="px-10 py-2 border-2 rounded-full border-[#FF64AE] bg-[#FF64AE] text-sm tracking-widest text-white font-semibold h-[52px] hover:scale-105 hover:bg-white hover:text-pink-400 transition-all inline-flex items-center justify-center whitespace-nowrap"
-    >
+    <button type={type} onClick={onClick} className={className}>
       {children}
-    </Link>
+    </button>
   );
 };
 
 export default PinkButton;
-

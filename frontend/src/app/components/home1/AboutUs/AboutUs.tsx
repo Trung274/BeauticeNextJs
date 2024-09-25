@@ -8,7 +8,7 @@ const AboutUs = () => (
     <div className="flex flex-col gap-y-5 w-full md:w-[45%]">
       <div className="flex flex-col gap-y-5">
         <div className="text-xs font-semibold text-[#FF64AE]">About Us</div>
-        <div className="text-3xl font-semibold">We are the best beauty clinic</div>
+        <div className="text-3xl text-[#091156] font-semibold">We are the best beauty clinic</div>
         <div className="text-base font-light text-[#8B8B8B] w-[71%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
           quam suscipit purus donec amet. Egestas volutpat facilisi eu

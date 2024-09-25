@@ -22,7 +22,7 @@ const StylistProfessional: React.FC = () => (
                     Stylist
                 </div>
 
-                <div className="text-xl font-semibold mt-3">
+                <div className="text-xl text-[#091156] font-semibold mt-3">
                     Briyan Nevalli
                 </div>
 

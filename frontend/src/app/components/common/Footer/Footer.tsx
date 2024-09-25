@@ -47,7 +47,7 @@ const Footer = () => (
                 <ul className="flex flex-col gap-2 list-none p-0">
                 <li className="flex items-center gap-1 text-[#D7DBFF]">
                   <CaretRight />
-                  <a href="/home">Home</a>
+                  <a href="/home2">Home</a>
                 </li>
                 <li className="flex items-center gap-1 text-[#D7DBFF]">
                   <CaretRight />

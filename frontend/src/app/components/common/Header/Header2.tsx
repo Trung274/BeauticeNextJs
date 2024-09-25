@@ -1,12 +1,12 @@
 "use client"
 
 import React, { useState } from 'react';
-import NavButton from '../Buttons/NavButton';
+import NavButton2 from '../Buttons/NavButton2';
 import PinkButton from '../Buttons/PinkButton';
-import MainLogo from '../../../../public/assets/MainLogo';
+import MainLogoWhite from '@/public/assets/MainLogoWhite';
 import ToggleButton from '../Buttons/ToggleButton';
 
-const Header = () => {
+const Header2: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,7 +16,7 @@ const Header = () => {
   const menuItems = [
     { href: '/', label: 'Home +', isHome: true },
     { href: '/about', label: 'About' },
-    { href: '/service', label: 'Service' },
+    { href: '/services', label: 'Service' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact', isPink: true }
@@ -26,7 +26,7 @@ const Header = () => {
     if (item.isPink) {
       return <PinkButton key={item.href} href={item.href}>{item.label}</PinkButton>;
     }
-    return <NavButton key={item.href} href={item.href} isHome={item.isHome}>{item.label}</NavButton>;
+    return <NavButton2 key={item.href} href={item.href} isHome={item.isHome}>{item.label}</NavButton2>;
   };
 
   return (
@@ -35,7 +35,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <MainLogo />
+            <MainLogoWhite />
           </div>
           
           {/* Desktop Navigation */}
@@ -85,4 +85,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;
