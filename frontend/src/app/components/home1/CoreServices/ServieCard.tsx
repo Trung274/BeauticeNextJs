@@ -15,7 +15,7 @@ interface ServiceCardProps {
 
 // ServiceCard component
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
-  <div className="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg p-4 h-96">
+  <div className="max-w-sm bg-white rounded-3xl overflow-hidden shadow-lg p-4 h-96">
     <div className="flex flex-col items-center text-center h-full">
       <Image
         src={service.icon}

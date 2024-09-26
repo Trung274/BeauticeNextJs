@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 
 const MainLogo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <Link href="/">
   <svg
     width="258"
     height="63"
@@ -29,6 +31,7 @@ const MainLogo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 </filter>
 </defs>
 </svg>
+</Link>
 );
 
 export default MainLogo;

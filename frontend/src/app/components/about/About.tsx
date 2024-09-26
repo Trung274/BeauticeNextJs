@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import ThumbnailAboutUsSVG from '@/public/assets/ThumbnailAboutUs3.svg'
+import PlayButtonSVG from '@/public/assets/PlayButton4.svg' 
 
 const About = () => (
     <div className="flex flex-col gap-y-5 mx-auto justify-center">
@@ -19,7 +20,7 @@ const About = () => (
                 </div>
             </div>
         </div>
-        <div className="container max-sm:[margin-left: 50px]">
+        <div className="container max-sm:[margin-left: 50px] relative">
             <div className="max-w-sm mx-auto md:max-w-none">
                 <Image
                     src={ThumbnailAboutUsSVG}
@@ -28,6 +29,14 @@ const About = () => (
                     height={350}
                     layout="responsive"
                 />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <Image
+                        src={PlayButtonSVG}
+                        alt="Play Button"
+                        width={200}
+                        height={200}
+                    />
+                </div>
             </div>
         </div>
     </div>

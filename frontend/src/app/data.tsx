@@ -79,8 +79,8 @@ export const RECENT_POSTS = [
   {
     id: 1,
     date: '01 jan 2021',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
     image: Post1,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
   },
   {
     id: 2,

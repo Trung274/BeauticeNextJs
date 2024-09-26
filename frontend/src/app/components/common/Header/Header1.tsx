@@ -34,7 +34,7 @@ const Header1 = () => {
   };
 
   const menuItems: MenuItem[] = [
-    { href: '/', label: 'Home +', isHome: true },
+    { href: '/home2', label: 'Home +', isHome: true },
     { href: '/about', label: 'About' },
     { href: '/services', label: 'Service' },
     { href: '/gallery', label: 'Gallery' },
