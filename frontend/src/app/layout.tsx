@@ -40,7 +40,7 @@ export default function RootLayout({
                 <main className="flex-grow w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                   {children}
                 </main>
-                <Footer />
+                <Footer className="mt-[-45px]" />
               </div>
             </div>
           ) : (
@@ -49,7 +49,7 @@ export default function RootLayout({
               <main className="flex-grow w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 {children}
               </main>
-              <Footer />
+              <Footer className="mt-[-45px]" />
             </div>
           )}
           <ScrollTop />

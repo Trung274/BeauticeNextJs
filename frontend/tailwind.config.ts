@@ -15,6 +15,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      spacing: {
+        '15': '3.75rem', // This is equivalent to 60px (15 * 4px)
+      },
     },
   },
   plugins: [

@@ -8,19 +8,23 @@ import InstagramWhite from '../Icons/InstagramWhite';
 import FooterBg from './FooterBg';
 import CaretRight from './CaretRight';
 
-const Footer = () => (
-  <footer className="relative w-full overflow-hidden">
+interface FooterProps {
+  className?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ className = '' }) => (
+  <footer className={`relative w-full overflow-hidden ${className}`}>
     <div className="absolute inset-0 w-full">
       <FooterBg className="w-full h-full" />
     </div>
 
     <div className="relative z-10 py-16 w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-44 w-full">
           {/* Logo + Address info */}
-          <div className="flex flex-col gap-4 w-full lg:max-w-[50%]">
+          <div className="flex flex-col gap-4 w-full lg:max-w-[50%] -ml-[1.5rem]">
             <FooterLogo />
-            <div className="flex flex-col w-full pl-[31px] pt-[35px]">
+            <div className="flex flex-col w-full pl-[31px] pt-[22px]">
               <p className="text-base text-[#D7DBFF] leading-[21px] font-regular tracking-widest text-wrap">
                 <strong className="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
               </p>
@@ -42,9 +46,9 @@ const Footer = () => (
           <div className="flex flex-col w-full lg:max-w-[50%]">
             <div className="flex flex-col sm:flex-row justify-between gap-8">
               {/* Pages */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col ml-12 -mt-3 gap-6">
                 <div className="font-semibold text-lg text-[#ffffff] tracking-widest pb-2">Pages</div>
-                <ul className="flex flex-col gap-2 list-none p-0">
+                <ul className="flex flex-col gap-3 -mt-2 list-none p-0">
                 <li className="flex items-center gap-1 text-[#D7DBFF]">
                   <CaretRight />
                   <a href="/home2">Home</a>
@@ -69,10 +73,10 @@ const Footer = () => (
               </div>
 
               {/* Information */}
-              <div className="flex flex-col gap-6">
-                <div className="font-semibold text-lg text-[#ffffff] tracking-widest pb-2">Information</div>
-                <ul className="flex flex-col gap-2 list-none p-0">
-                <li className="flex items-center gap-1 text-[#D7DBFF]">
+              <div className="flex flex-col -mr-3 -mt-3 gap-6">
+                <div className="font-semibold text-lg text-[#ffffff] tracking-widest pb-2">Informations</div>
+                <ul className="flex flex-col gap-3 -mt-1 list-none p-0">
+                <li className="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
                   <CaretRight />
                   <a href="/terms">Terms & conditions</a>
                 </li>
@@ -95,7 +99,7 @@ const Footer = () => (
         </div>
 
         {/* Social icon + copyright */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10 pt-8 w-full">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10 pt-8 w-full -mt-10 -ml-7">
           <div className="flex gap-6 sm:gap-12 mb-4 sm:mb-0 flex-wrap justify-center">
             <FacebookWhite />
             <TwitterWhite />
@@ -103,7 +107,7 @@ const Footer = () => (
             <YoutubeWhite />
             <InstagramWhite />  
           </div>
-          <div className="text-base tracking-widest text-[#D7DBFF] text-center sm:text-right">
+          <div className="text-base -mr-14 tracking-widest text-[#D7DBFF] text-center sm:text-right">
             © AltDesain Studio 2021 - All right reserved.
           </div>
         </div>

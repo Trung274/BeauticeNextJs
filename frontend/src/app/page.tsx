@@ -7,21 +7,26 @@ import ContactUs from "./components/home1/ContactUs/Contactus";
 export default function home1() {
   return (
     <main className="flex flex-col">
-      <section className="w-full mx-auto px-4 py-16">
+
+      <section className="w-full mx-auto px-4 py-24">
         <MainSlider />
       </section>
-      <section className="w-full mx-auto px-4 py-16">
-      <CoreServices />
+
+      <section className="w-full mx-auto px-4 py-10">
+        <CoreServices />
       </section>
-      <section className="w-full mx-auto px-4 py-16">
-      </section>
+
+      <section className="w-full mx-auto px-4 pt-18">
       <AboutUs />
-      <section className="w-full mx-auto px-4 py-16">
       </section>
+
+      <section className="w-full mx-auto px-4 pt-16">
       <ProfessionalTeams />
-      <section className="w-full mx-auto px-4 py-16">
       </section>
+      
+      <section className="w-full mx-auto px-4 pt-36">
       <ContactUs />
+      </section>
     </main>
   );
 }

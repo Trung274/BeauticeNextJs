@@ -148,7 +148,7 @@ export const SERVICES = [
   {
     icon: Treatments,
     title: 'Skin treatments',
-    description: 'Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.',
+    description: 'Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla                                   turpis.',
   },
   {
     icon: Product,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import NavButton from '../Buttons/NavButton';
-import PinkButton from '../Buttons/PinkButton';
+import PinkButton0 from '../Buttons/PinkButton0';
 import MainLogo from '../../../../public/assets/MainLogo';
 import ToggleButton from '../Buttons/ToggleButton';
 import { useAuth } from '../../../context/AuthContext';
@@ -44,7 +44,7 @@ const Header1 = () => {
 
   const renderMenuItem = (item: MenuItem) => {
     if (item.isPink) {
-      return <PinkButton key={item.href} href={item.href}>{item.label}</PinkButton>;
+      return <PinkButton0 key={item.href} href={item.href}>{item.label}</PinkButton0>;
     }
     return <NavButton key={item.href} href={item.href} isHome={item.isHome}>{item.label}</NavButton>;
   };
@@ -53,16 +53,16 @@ const Header1 = () => {
   const avatarUrl = user ? `https://api.dicebear.com/6.x/initials/svg?seed=${encodeURIComponent(user.name)}&backgroundColor=FF64AE` : '';
 
   return (
-    <header className="w-full relative">
+    <header className="w-full relative pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex-shrink-0">
+        <div className="flex justify-between items-center space-x-1.5 py-4">
+          <div className="flex-shrink-0 pl-8 pt-1">
             <MainLogo />
           </div>
           
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-[52px] pb-1 pr-9">
             {menuItems.map(renderMenuItem)}
-            {user ? (
+            {/* {user ? (
               <div className="relative">
                 <button onClick={toggleDropdown} className="flex items-center space-x-2">
                   <img
@@ -81,7 +81,7 @@ const Header1 = () => {
               </div>
             ) : (
               <PinkButton href="/auth/login">Login / Register</PinkButton>
-            )}
+            )} */}
           </nav>
 
           <ToggleButton onClick={toggleMenu} isOpen={isMenuOpen} />
@@ -102,7 +102,7 @@ const Header1 = () => {
               </svg>
             </button>
           </div>
-          <nav className="flex-grow">
+          <nav className="flex-grow pl-40">
             <ul className="px-4 space-y-4">
               {menuItems.map((item) => (
                 <li key={item.href} onClick={toggleMenu}>
@@ -120,7 +120,7 @@ const Header1 = () => {
                 </>
               ) : (
                 <li>
-                  <PinkButton href="/auth/login" onClick={toggleMenu}>Login / Register</PinkButton>
+                  <PinkButton0 href="/auth/login" onClick={toggleMenu}>Login / Register</PinkButton0>
                 </li>
               )}
             </ul>

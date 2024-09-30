@@ -1,29 +1,32 @@
 import Image from 'next/image'
-import ThumbnailAboutUsSVG from '@/public/assets/ThumbnailAboutUs.svg'
+import ThumbnailAboutUsSVG from '@/public/assets/ThumbnailAboutUs'
 import NavButton from '../../common/Buttons/NavButton'
 import PinkButton from '../../common/Buttons/PinkButton'
+import Link from 'next/link'
 
 const AboutUs = () => (
   <div className="flex flex-wrap w-full justify-between items-start">
-    <div className="flex flex-col gap-y-5 w-full md:w-[45%]">
-      <div className="flex flex-col gap-y-5">
-        <div className="text-xs font-semibold text-[#FF64AE]">About Us</div>
-        <div className="text-3xl text-[#091156] font-semibold">We are the best beauty clinic</div>
-        <div className="text-base font-light text-[#8B8B8B] w-[71%]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-          quam suscipit purus donec amet. Egestas volutpat facilisi eu
-          libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
+    <div className="flex flex-col mt-16 gap-y-3 w-full md:w-[55%]">
+      <div className="flex flex-col ml-6 gap-y-4">
+        <div className="text-base mt-3 font-semibold text-[#FF64AE]">About Us</div>
+        <div className="text-4xl text-[#091156] font-semibold">We are the best beauty clinic</div>
+        <div className="text-base tracking-widest font-medium text-[#8B8B8B] w-[76%]">
+          Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Elit,
+          quam suscipit purus donec <br /> amet. Egestas volutpat facilisi eu
+          libero. Nunc, <br /> ipsum ornare mauris sit quam quis enim. Varius <br />
           tellus in suspendisse placerat.
           <br />
           <br />
-          Id dui erat sed quam tellus in purus. Pellentesque
+          Id dui erat sed quam tellus in purus. Pellentesque <br />
           congue fringilla cras tellus enim.
         </div>
       </div>
 
-      <div className="flex flex-row max-md:flex-col">
+      <div className="flex flex-row max-md:flex-col ml-7 mt-10">
+        <div className=''>
         <PinkButton href="/learn-more">Learn More</PinkButton>
-        <div className="flex flex-row items-center pl-8 place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
+        </div>
+        <div className="flex flex-row items-center pl-12 place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
           <svg
             width="49"
             height="50"
@@ -39,21 +42,13 @@ const AboutUs = () => (
               fill="white"
             />
           </svg>
-          <NavButton href="/watch-video">Watch Video</NavButton>
+          <div className='text-xl tracking-normal font-medium text-[#8B8B8B]'>Watch Video</div>
         </div>
       </div>
       
     </div>
-    <div className="w-full md:w-[45%] mt-6 md:mt-0">
-      <div className="max-w-sm mx-auto md:max-w-none">
-        <Image
-          src={ThumbnailAboutUsSVG}
-          alt=""
-          width={476}
-          height={350}
-          layout="responsive"
-        />
-      </div>
+    <div className="w-full mt-11 mr-8 md:w-[45%] md:max-w-none md:-ml-8">
+        <ThumbnailAboutUsSVG />
     </div>
   </div>
 )
