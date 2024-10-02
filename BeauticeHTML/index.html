@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactored Header and Main Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff64ae',
+                        'blue-navi': '#414880',
+                        'blue-navi-dark': '#091156',
+                        gray: '#8b8b8b',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body class="font-poppins">
+    <div class="relative">
+        <!-- Background SVG -->
+        <div class="absolute top-0 left-0 right-0 z-0">
+            <img src="./assets/SlideBackground.svg" alt="Slide Background" class="w-auto h-auto max-w-none">
+            <img src="./assets/BackgroundBubble.svg" alt="Background Bubble"
+                class="w-auto h-auto absolute top-[1446px] right-0">
+            <img src="./assets/BackgroundBubble2.svg" alt="Background Bubble"
+                class="w-auto h-auto absolute top-[3143px] left-0">
+        </div>
+
+        <!-- Header -->
+        <header class="relative z-10 w-full pt-5">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex justify-between items-start py-4">
+                    <div class="flex-shrink-0 pl-8 pt-1">
+                        <img src="assets/MainLogo.svg" alt="Main Logo" width="266" height="70" />
+                    </div>
+                    <nav class="hidden md:flex items-center gap-12 pb-1 pr-9 pt-2">
+                        <a href="#" class="nav-button text-primary -mr-[8px] tracking-widest font-medium">
+                            Home <span class="-ml-[5px]">+</span>
+                        </a>
+                        <a href="#" class="nav-button text-gray -mr-[5px] tracking-widest font-medium">About</a>
+                        <a href="#" class="nav-button text-gray tracking-widest font-medium">Service</a>
+                        <a href="#" class="nav-button text-gray -mr-[5px] tracking-widest font-medium">Gallery</a>
+                        <a href="#" class="nav-button text-gray mr-[4px] tracking-widest font-medium">Blog</a>
+                        <a href="#"
+                            class="px-10 py-2.5 border-2 border-primary bg-primary text-white font-semibold text-base tracking-widest rounded-full h-14 inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-primary">Contact</a>
+                    </nav>
+                    <button class="md:hidden">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMyAxMkgyMSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMyA2SDIxIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zIDE4SDIxIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg=="
+                            alt="Menu" />
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-10">
+            <!-- Main Slider -->
+            <section class="container mx-auto max-w-7xl px-8">
+                <div class="flex flex-col justify-center pt-7">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2 grid gap-y-4 pl-15">
+                            <h1 class="text-5xl pt-40 pl-[78px] leading-tight text-blue-navi-dark font-semibold">
+                                Clinic & beauty <br /> consultant
+                            </h1>
+                            <p class="text-base pl-[77px] tracking-widest text-blue-navi-dark font-semibold -mt-[77px]">
+                                It is a long established fact that a reader will be <br /> by the
+                                readable content of a page.
+                            </p>
+                            <div class="-mt-20 pl-[77px]">
+                                <a href="#"
+                                    class="px-10 py-2.5 border-2 border-primary bg-primary text-white font-semibold text-base tracking-widest rounded-full h-16 inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-primary">More
+                                    Details</a>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-7/12 lg:w-7/10 pr-8 pt-[100px]">
+                            <img src="./assets/BgSlider.svg" alt="Slider Image"
+                                class="w-full h-auto max-w-[135%] md:max-w-[135%] lg:max-w-[145%]" />
+                        </div>
+                    </div>
+                    <div class="flex pt-[125px] justify-center">
+                        <img src="./assets/SlideButton.svg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Services -->
+            <section class="py-16 pt-32">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col justify-center gap-y-6 text-center">
+                        <div class="flex flex-col gap-y-3">
+                            <div class="text-base font-semibold text-primary">Main Services</div>
+                            <div class="text-4xl text-blue-navi-dark font-semibold leading-tight">
+                                Learn services to focus <br />
+                                on your beauty
+                            </div>
+                            <div class="text-base tracking-widest max-w-5xl mx-auto font-light text-gray mt-1">
+                                Porta rhoncus orci condimentum vitae lobortis eu dignissim non massa. Non parturient <br
+                                    class="hidden sm:inline" /> amet, feugiat tellus sagittis, scelerisque eget nulla
+                                turpis.
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-8 p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-14">
+                                <!-- Service Card 1 -->
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-6 w-[343px] h-[440px]">
+                                    <div class="flex flex-col pt-5 items-center text-center h-full">
+                                        <img src="./assets/Animation1.svg" alt="Service 1" width="160" height="160"
+                                            class="mb-6" />
+                                        <h3 class="text-blue-navi-dark text-base font-bold tracking-wider mt-9 mb-3">
+                                            Beauty consultation
+                                        </h3>
+                                        <p class="text-gray tracking-widest text-sm mt-2 px-4">
+                                            Non parturient amet, feugiat <br> tellus sagittis, scelerisque eget <br>
+                                            nulla turpis.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Service Card 2 -->
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-6 w-[343px] h-[440px]">
+                                    <div class="flex flex-col pt-5 items-center text-center h-full">
+                                        <img src="./assets/Animation2.svg" alt="Service 2" width="160" height="160"
+                                            class="mb-6" />
+                                        <h3 class="text-blue-navi-dark text-base font-bold tracking-wider mt-9 mb-3">
+                                            Skin treatments</h3>
+                                        <p class="text-gray tracking-widest text-sm mt-2 px-4">
+                                            Non parturient amet, feugiat <br> tellus sagittis, scelerisque eget <br>
+                                            nulla turpis.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Service Card 3 -->
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-6 w-[343px] h-[440px]">
+                                    <div class="flex flex-col pt-5 items-center text-center h-full">
+                                        <img src="./assets/Animation3.svg" alt="Service 3" width="160" height="160"
+                                            class="mb-6" />
+                                        <h3 class="text-blue-navi-dark text-base font-bold tracking-wider mt-9 mb-3">
+                                            Beauty product</h3>
+                                        <p class="text-gray tracking-widest text-sm mt-2 px-4">
+                                            Non parturient amet, feugiat <br> tellus sagittis, scelerisque eget <br>
+                                            nulla turpis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us -->
+            <section class="py-16 relative overflow-hidden">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap w-full -mt-24 ml-8 justify-between items-center">
+                        <div class="flex flex-col mt-16 gap-y-3 w-full md:w-1/2 lg:w-[55%] z-10">
+                            <div class="flex flex-col ml-6 gap-y-4">
+                                <div class="text-base mt-3 font-semibold text-primary">About Us</div>
+                                <div class="text-4xl text-blue-navi-dark font-semibold">We are the best beauty clinic
+                                </div>
+                                <div class="text-base mt-1 -ml-1 tracking-widest font-medium text-gray">
+                                    Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Elit,
+                                    quam suscipit purus donec <br> amet. Egestas volutpat facilisi eu
+                                    libero. Nunc, <br> ipsum ornare mauris sit quam quis enim. Varius <br>
+                                    tellus in suspendisse placerat.
+                                    <br><br>
+                                    Id dui erat sed quam tellus in purus. Pellentesque <br>
+                                    congue fringilla cras tellus enim.
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row max-md:flex-col ml-[22px] mt-10">
+                                <div>
+                                    <a href="/learn-more"
+                                        class="px-10 py-2.5 border-2 border-primary bg-primary text-white font-semibold text-base tracking-widest rounded-full h-[60px] w-[200px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+                                <div
+                                    class="flex flex-row items-center pl-[45px] place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
+                                    <svg width="49" height="50" viewBox="0 0 49 50" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mr-2" aria-label="Play video">
+                                        <circle cx="24.5" cy="24.9382" r="24.5" fill="#091156" />
+                                        <path
+                                            d="M32.1167 23.6145C33.45 24.3843 33.45 26.3088 32.1167 27.0786L22.8042 32.4551C21.4708 33.2249 19.8042 32.2627 19.8042 30.7231L19.8042 19.9699C19.8042 18.4303 21.4708 17.4681 22.8042 18.2379L32.1167 23.6145Z"
+                                            fill="white" />
+                                    </svg>
+                                    <div class="text-base tracking-widest ml-1 font-medium text-gray">Watch Video</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div
+                            class="w-full mr-14 mt-[10px] md:w-1/2 lg:w-[45%] md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 md:max-w-none">
+                            <!-- Adjusted positioning -->
+                            <img src="./assets/ThumbnailAboutUs.svg" alt="About Us Thumbnail"
+                                class="w-full h-auto max-w-none md:max-w-[97%]">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Teams -->
+            <section class="flex flex-col mt-[76px] justify-center space-y-12 text-center font-poppins">
+                <div class="flex flex-col mb-16">
+                    <div class="text-sm font-semibold tracking-widest text-primary">Professional Teams</div>
+                    <h2 class="text-3xl mt-4 sm:text-4xl font-semibold text-blue-navi-dark">The Professional expert</h2>
+                    <p class="text-base tracking-widest font-light mt-5 text-gray max-w-4xl mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 xl:gap-8 justify-center items-center">
+                    <!-- Professional Card 1 -->
+                    <div class="flex">
+                        <div class="relative w-[424px] h-[626px] bg-white rounded-[42px]">
+                            <!-- Avatar -->
+                            <img src="./assets/SurgeonAvatar.svg" alt="Dermatologist"
+                                class="absolute top-[95px] ml-12 left-1/2 transform -translate-x-1/2 w-[146px] h-[146px]">
+
+                            <!-- Title -->
+                            <div
+                                class="absolute top-[292px] ml-[100px] left-0 right-0 text-center text-base font-semibold text-primary">
+                                Surgeon
+                            </div>
+
+                            <!-- Name -->
+                            <div
+                                class="absolute top-[325px] ml-24 left-0 right-0 text-center text-xl tracking-tighter font-semibold text-blue-navi-dark">
+                                Briyan Nevalli
+                            </div>
+
+                            <!-- Description -->
+                            <div
+                                class="absolute top-[372px] ml-24 tracking-wide left-0 right-0 text-center text-base font-light text-gray leading-tight">
+                                Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit ut<br>
+                                aliquam, purus sit
+                            </div>
+
+                            <!-- Social Icons -->
+                            <div class="flex flex-row ml-24 mt-[475px] gap-x-1 justify-center">
+                                <!-- Twitter Icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4385)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M51.4302 28.4079C51.446 28.63 51.446 28.8521 51.446 29.0742C51.446 35.8476 46.2906 43.6522 36.868 43.6522C33.9651 43.6522 31.2684 42.8114 29 41.3521C29.4125 41.3997 29.809 41.4155 30.2373 41.4155C32.6326 41.4155 34.8375 40.6065 36.5983 39.2265C34.3458 39.1789 32.4581 37.7036 31.8077 35.6731C32.125 35.7207 32.4422 35.7524 32.7754 35.7524C33.2354 35.7524 33.6955 35.689 34.1237 35.578C31.776 35.102 30.0152 33.0399 30.0152 30.5494V30.486C30.6973 30.8667 31.4905 31.1046 32.3312 31.1363C30.9511 30.2163 30.0469 28.6458 30.0469 26.8692C30.0469 25.9174 30.3007 25.045 30.7449 24.2835C33.2671 27.3927 37.0583 29.4231 41.3096 29.6452C41.2303 29.2645 41.1827 28.868 41.1827 28.4714C41.1827 25.6478 43.4669 23.3477 46.3064 23.3477C47.7816 23.3477 49.1141 23.9663 50.05 24.9657C51.208 24.7436 52.3184 24.3153 53.302 23.7284C52.9212 24.9181 52.1122 25.9175 51.0494 26.552C52.0805 26.441 53.0799 26.1554 53.9999 25.7588C53.302 26.774 52.4295 27.6782 51.4302 28.4079Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4385" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4385"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Facebook icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4381)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M46.3174 35.0625L47.0117 30.5381H42.6704V27.6021C42.6704 26.3643 43.2769 25.1577 45.2212 25.1577H47.1948V21.3057C47.1948 21.3057 45.4038 21 43.6914 21C40.1162 21 37.7793 23.167 37.7793 27.0898V30.5381H33.8052V35.0625H37.7793V46H42.6704V35.0625H46.3174Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4381" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4381"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Instagram icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4377)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M41.5049 27.8848C38.3994 27.8848 35.8945 30.3896 35.8945 33.4951C35.8945 36.6006 38.3994 39.1055 41.5049 39.1055C44.6104 39.1055 47.1152 36.6006 47.1152 33.4951C47.1152 30.3896 44.6104 27.8848 41.5049 27.8848ZM41.5049 37.1426C39.498 37.1426 37.8574 35.5068 37.8574 33.4951C37.8574 31.4834 39.4932 29.8477 41.5049 29.8477C43.5166 29.8477 45.1523 31.4834 45.1523 33.4951C45.1523 35.5068 43.5117 37.1426 41.5049 37.1426ZM48.6533 27.6553C48.6533 28.3828 48.0674 28.9639 47.3447 28.9639C46.6172 28.9639 46.0361 28.3779 46.0361 27.6553C46.0361 26.9326 46.6221 26.3467 47.3447 26.3467C48.0674 26.3467 48.6533 26.9326 48.6533 27.6553ZM52.3691 28.9834C52.2861 27.2305 51.8857 25.6777 50.6016 24.3984C49.3223 23.1191 47.7695 22.7188 46.0166 22.6309C44.21 22.5283 38.7949 22.5283 36.9883 22.6309C35.2402 22.7139 33.6875 23.1143 32.4033 24.3936C31.1191 25.6729 30.7236 27.2256 30.6357 28.9785C30.5332 30.7852 30.5332 36.2002 30.6357 38.0068C30.7188 39.7598 31.1191 41.3125 32.4033 42.5918C33.6875 43.8711 35.2354 44.2715 36.9883 44.3594C38.7949 44.4619 44.21 44.4619 46.0166 44.3594C47.7695 44.2764 49.3223 43.876 50.6016 42.5918C51.8809 41.3125 52.2812 39.7598 52.3691 38.0068C52.4717 36.2002 52.4717 30.79 52.3691 28.9834ZM50.0352 39.9453C49.6543 40.9023 48.917 41.6396 47.9551 42.0254C46.5146 42.5967 43.0967 42.4648 41.5049 42.4648C39.9131 42.4648 36.4902 42.5918 35.0547 42.0254C34.0977 41.6445 33.3604 40.9072 32.9746 39.9453C32.4033 38.5049 32.5352 35.0869 32.5352 33.4951C32.5352 31.9033 32.4082 28.4805 32.9746 27.0449C33.3555 26.0879 34.0928 25.3506 35.0547 24.9648C36.4951 24.3936 39.9131 24.5254 41.5049 24.5254C43.0967 24.5254 46.5195 24.3984 47.9551 24.9648C48.9121 25.3457 49.6494 26.083 50.0352 27.0449C50.6064 28.4854 50.4746 31.9033 50.4746 33.4951C50.4746 35.0869 50.6064 38.5098 50.0352 39.9453Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4377" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4377"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Card 2 -->
+                    <div class="flex">
+                        <div
+                            class="relative w-[424px] h-[626px] bg-white rounded-[42px] shadow-[0px_25px_50px_rgba(246,247,255,1)]">
+                            <!-- Avatar -->
+                            <img src="./assets/DermatologistAvatar.svg" alt="Dermatologist"
+                                class="absolute top-[95px] left-1/2 transform -translate-x-1/2 w-[146px] h-[146px]">
+
+                            <!-- Title -->
+                            <div
+                                class="absolute top-[292px] left-0 right-0 text-center text-base font-semibold text-primary">
+                                Dermatologist
+                            </div>
+
+                            <!-- Name -->
+                            <div
+                                class="absolute top-[325px] left-0 right-0 text-center text-xl tracking-tighter font-semibold text-blue-navi-dark">
+                                Bella sebastian
+                            </div>
+
+                            <!-- Description -->
+                            <div
+                                class="absolute top-[372px] tracking-wide left-0 right-0 text-center text-base font-light text-gray leading-tight">
+                                Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit ut<br>
+                                aliquam, purus sit
+                            </div>
+
+                            <!-- Social Icons -->
+                            <div class="flex flex-row mt-[475px] gap-x-1 justify-center">
+                                <!-- Twitter Icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4385)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M51.4302 28.4079C51.446 28.63 51.446 28.8521 51.446 29.0742C51.446 35.8476 46.2906 43.6522 36.868 43.6522C33.9651 43.6522 31.2684 42.8114 29 41.3521C29.4125 41.3997 29.809 41.4155 30.2373 41.4155C32.6326 41.4155 34.8375 40.6065 36.5983 39.2265C34.3458 39.1789 32.4581 37.7036 31.8077 35.6731C32.125 35.7207 32.4422 35.7524 32.7754 35.7524C33.2354 35.7524 33.6955 35.689 34.1237 35.578C31.776 35.102 30.0152 33.0399 30.0152 30.5494V30.486C30.6973 30.8667 31.4905 31.1046 32.3312 31.1363C30.9511 30.2163 30.0469 28.6458 30.0469 26.8692C30.0469 25.9174 30.3007 25.045 30.7449 24.2835C33.2671 27.3927 37.0583 29.4231 41.3096 29.6452C41.2303 29.2645 41.1827 28.868 41.1827 28.4714C41.1827 25.6478 43.4669 23.3477 46.3064 23.3477C47.7816 23.3477 49.1141 23.9663 50.05 24.9657C51.208 24.7436 52.3184 24.3153 53.302 23.7284C52.9212 24.9181 52.1122 25.9175 51.0494 26.552C52.0805 26.441 53.0799 26.1554 53.9999 25.7588C53.302 26.774 52.4295 27.6782 51.4302 28.4079Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4385" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4385"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Facebook icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4381)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M46.3174 35.0625L47.0117 30.5381H42.6704V27.6021C42.6704 26.3643 43.2769 25.1577 45.2212 25.1577H47.1948V21.3057C47.1948 21.3057 45.4038 21 43.6914 21C40.1162 21 37.7793 23.167 37.7793 27.0898V30.5381H33.8052V35.0625H37.7793V46H42.6704V35.0625H46.3174Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4381" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4381"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Instagram icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4377)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M41.5049 27.8848C38.3994 27.8848 35.8945 30.3896 35.8945 33.4951C35.8945 36.6006 38.3994 39.1055 41.5049 39.1055C44.6104 39.1055 47.1152 36.6006 47.1152 33.4951C47.1152 30.3896 44.6104 27.8848 41.5049 27.8848ZM41.5049 37.1426C39.498 37.1426 37.8574 35.5068 37.8574 33.4951C37.8574 31.4834 39.4932 29.8477 41.5049 29.8477C43.5166 29.8477 45.1523 31.4834 45.1523 33.4951C45.1523 35.5068 43.5117 37.1426 41.5049 37.1426ZM48.6533 27.6553C48.6533 28.3828 48.0674 28.9639 47.3447 28.9639C46.6172 28.9639 46.0361 28.3779 46.0361 27.6553C46.0361 26.9326 46.6221 26.3467 47.3447 26.3467C48.0674 26.3467 48.6533 26.9326 48.6533 27.6553ZM52.3691 28.9834C52.2861 27.2305 51.8857 25.6777 50.6016 24.3984C49.3223 23.1191 47.7695 22.7188 46.0166 22.6309C44.21 22.5283 38.7949 22.5283 36.9883 22.6309C35.2402 22.7139 33.6875 23.1143 32.4033 24.3936C31.1191 25.6729 30.7236 27.2256 30.6357 28.9785C30.5332 30.7852 30.5332 36.2002 30.6357 38.0068C30.7188 39.7598 31.1191 41.3125 32.4033 42.5918C33.6875 43.8711 35.2354 44.2715 36.9883 44.3594C38.7949 44.4619 44.21 44.4619 46.0166 44.3594C47.7695 44.2764 49.3223 43.876 50.6016 42.5918C51.8809 41.3125 52.2812 39.7598 52.3691 38.0068C52.4717 36.2002 52.4717 30.79 52.3691 28.9834ZM50.0352 39.9453C49.6543 40.9023 48.917 41.6396 47.9551 42.0254C46.5146 42.5967 43.0967 42.4648 41.5049 42.4648C39.9131 42.4648 36.4902 42.5918 35.0547 42.0254C34.0977 41.6445 33.3604 40.9072 32.9746 39.9453C32.4033 38.5049 32.5352 35.0869 32.5352 33.4951C32.5352 31.9033 32.4082 28.4805 32.9746 27.0449C33.3555 26.0879 34.0928 25.3506 35.0547 24.9648C36.4951 24.3936 39.9131 24.5254 41.5049 24.5254C43.0967 24.5254 46.5195 24.3984 47.9551 24.9648C48.9121 25.3457 49.6494 26.083 50.0352 27.0449C50.6064 28.4854 50.4746 31.9033 50.4746 33.4951C50.4746 35.0869 50.6064 38.5098 50.0352 39.9453Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4377" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4377"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Card 3 -->
+                    <div class="flex">
+                        <div class="relative w-[424px] h-[626px] bg-white rounded-[42px]">
+                            <!-- Avatar -->
+                            <img src="./assets/StylelistAvatar.svg" alt="Dermatologist"
+                                class="absolute top-[95px] -ml-12 left-1/2 transform -translate-x-1/2 w-[146px] h-[146px]">
+
+                            <!-- Title -->
+                            <div
+                                class="absolute top-[292px] -ml-[100px] tracking-tight left-0 right-0 text-center text-base font-semibold text-primary">
+                                Styllist expert
+                            </div>
+
+                            <!-- Name -->
+                            <div
+                                class="absolute top-[325px] -ml-24 left-0 right-0 text-center text-xl tracking-tighter font-semibold text-blue-navi-dark">
+                                Lilly Adams
+                            </div>
+
+                            <!-- Description -->
+                            <div
+                                class="absolute top-[372px] -ml-24 tracking-wide left-0 right-0 text-center text-base font-light text-gray leading-tight">
+                                Lorem ipsum dolor sit amet,<br>
+                                consectetur adipiscing elit ut<br>
+                                aliquam, purus sit
+                            </div>
+
+                            <!-- Social Icons -->
+                            <div class="flex flex-row -ml-24 mt-[475px] gap-x-1 justify-center">
+                                <!-- Twitter Icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4385)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M51.4302 28.4079C51.446 28.63 51.446 28.8521 51.446 29.0742C51.446 35.8476 46.2906 43.6522 36.868 43.6522C33.9651 43.6522 31.2684 42.8114 29 41.3521C29.4125 41.3997 29.809 41.4155 30.2373 41.4155C32.6326 41.4155 34.8375 40.6065 36.5983 39.2265C34.3458 39.1789 32.4581 37.7036 31.8077 35.6731C32.125 35.7207 32.4422 35.7524 32.7754 35.7524C33.2354 35.7524 33.6955 35.689 34.1237 35.578C31.776 35.102 30.0152 33.0399 30.0152 30.5494V30.486C30.6973 30.8667 31.4905 31.1046 32.3312 31.1363C30.9511 30.2163 30.0469 28.6458 30.0469 26.8692C30.0469 25.9174 30.3007 25.045 30.7449 24.2835C33.2671 27.3927 37.0583 29.4231 41.3096 29.6452C41.2303 29.2645 41.1827 28.868 41.1827 28.4714C41.1827 25.6478 43.4669 23.3477 46.3064 23.3477C47.7816 23.3477 49.1141 23.9663 50.05 24.9657C51.208 24.7436 52.3184 24.3153 53.302 23.7284C52.9212 24.9181 52.1122 25.9175 51.0494 26.552C52.0805 26.441 53.0799 26.1554 53.9999 25.7588C53.302 26.774 52.4295 27.6782 51.4302 28.4079Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4385" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4385" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4385"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Facebook icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4381)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M46.3174 35.0625L47.0117 30.5381H42.6704V27.6021C42.6704 26.3643 43.2769 25.1577 45.2212 25.1577H47.1948V21.3057C47.1948 21.3057 45.4038 21 43.6914 21C40.1162 21 37.7793 23.167 37.7793 27.0898V30.5381H33.8052V35.0625H37.7793V46H42.6704V35.0625H46.3174Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4381" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4381" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4381"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+
+                                <!-- Instagram icon -->
+                                <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_101_4377)">
+                                        <circle cx="41.5" cy="33.5" r="24.5" fill="white" />
+                                    </g>
+                                    <path
+                                        d="M41.5049 27.8848C38.3994 27.8848 35.8945 30.3896 35.8945 33.4951C35.8945 36.6006 38.3994 39.1055 41.5049 39.1055C44.6104 39.1055 47.1152 36.6006 47.1152 33.4951C47.1152 30.3896 44.6104 27.8848 41.5049 27.8848ZM41.5049 37.1426C39.498 37.1426 37.8574 35.5068 37.8574 33.4951C37.8574 31.4834 39.4932 29.8477 41.5049 29.8477C43.5166 29.8477 45.1523 31.4834 45.1523 33.4951C45.1523 35.5068 43.5117 37.1426 41.5049 37.1426ZM48.6533 27.6553C48.6533 28.3828 48.0674 28.9639 47.3447 28.9639C46.6172 28.9639 46.0361 28.3779 46.0361 27.6553C46.0361 26.9326 46.6221 26.3467 47.3447 26.3467C48.0674 26.3467 48.6533 26.9326 48.6533 27.6553ZM52.3691 28.9834C52.2861 27.2305 51.8857 25.6777 50.6016 24.3984C49.3223 23.1191 47.7695 22.7188 46.0166 22.6309C44.21 22.5283 38.7949 22.5283 36.9883 22.6309C35.2402 22.7139 33.6875 23.1143 32.4033 24.3936C31.1191 25.6729 30.7236 27.2256 30.6357 28.9785C30.5332 30.7852 30.5332 36.2002 30.6357 38.0068C30.7188 39.7598 31.1191 41.3125 32.4033 42.5918C33.6875 43.8711 35.2354 44.2715 36.9883 44.3594C38.7949 44.4619 44.21 44.4619 46.0166 44.3594C47.7695 44.2764 49.3223 43.876 50.6016 42.5918C51.8809 41.3125 52.2812 39.7598 52.3691 38.0068C52.4717 36.2002 52.4717 30.79 52.3691 28.9834ZM50.0352 39.9453C49.6543 40.9023 48.917 41.6396 47.9551 42.0254C46.5146 42.5967 43.0967 42.4648 41.5049 42.4648C39.9131 42.4648 36.4902 42.5918 35.0547 42.0254C34.0977 41.6445 33.3604 40.9072 32.9746 39.9453C32.4033 38.5049 32.5352 35.0869 32.5352 33.4951C32.5352 31.9033 32.4082 28.4805 32.9746 27.0449C33.3555 26.0879 34.0928 25.3506 35.0547 24.9648C36.4951 24.3936 39.9131 24.5254 41.5049 24.5254C43.0967 24.5254 46.5195 24.3984 47.9551 24.9648C48.9121 25.3457 49.6494 26.083 50.0352 27.0449C50.6064 28.4854 50.4746 31.9033 50.4746 33.4951C50.4746 35.0869 50.6064 38.5098 50.0352 39.9453Z"
+                                        fill="#091156" />
+                                    <defs>
+                                        <filter id="filter0_d_101_4377" x="0" y="0" width="79" height="79"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feOffset dx="-2" dy="6" />
+                                            <feGaussianBlur stdDeviation="8" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.900764 0 0 0 0 0.912127 0 0 0 0 0.991667 0 0 0 1 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_101_4377" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_4377"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Us -->
+            <section class="py-16">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col mb-28 justify-center">
+                        <div class="flex flex-wrap flex-row justify-center max-md:flex-col px-4">
+
+                            <!-- Animation -->
+                            <div class="flex max-md:w-full -ml-3 mt-[68px]">
+                                <img src="./assets/AnimationContactUs.svg" alt="Contact Us Animation"
+                                    class="w-full h-auto mt-14">
+                            </div>
+
+                            <!-- Form -->
+                            <div class="flex flex-col gap-y-5 pt-[82px]">
+                                <div class="flex flex-col gap-y-5 pl-24">
+                                    <div class="text-base tracking-wide pl-[1px] font-semibold text-primary">
+                                        Contact Us
+                                    </div>
+                                    <div class="text-4xl -mt-2 pl-[1px] font-semibold text-blue-navi-dark">
+                                        Send your inquiry to <br>
+                                        our expert team
+                                    </div>
+                                    <div
+                                        class="text-base mt-[7px] pl-[1px] font-light text-gray mb-[12px] tracking-widest">
+                                        Lorem ipsum dolor sit amet nulla turapis tellus.
+                                    </div>
+                                    <div class="flex flex-col pt-4 -mr-4">
+                                        <form class="w-full max-w-[520px] space-y-10">
+                                            <div class="flex space-x-10">
+                                                <input type="text" placeholder="First name"
+                                                    class="w-full h-[61px] border border-[#D9DDFE] rounded-[15px] px-4 text-base text-gray-500 placeholder:text-sm placeholder:text-gray-400 placeholder:tracking-widest placeholder:relative placeholder:top-0 placeholder:left-1.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                                <input type="text" placeholder="Last name"
+                                                    class="w-full h-[61px] border border-[#D9DDFE] rounded-[15px] px-4 text-base text-gray-500 placeholder:text-sm placeholder:text-gray-400 placeholder:tracking-widest placeholder:relative placeholder:top-0 placeholder:left-1.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            </div>
+                                            <input type="email" placeholder="Email address"
+                                                class="w-full h-[61px] border border-[#D9DDFE] rounded-[15px] px-4 text-base text-gray-500 placeholder:text-sm placeholder:text-gray-400 placeholder:tracking-widest placeholder:relative placeholder:top-0 placeholder:left-1.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            <input type="text" placeholder="Subject message"
+                                                class="w-full h-[61px] border border-[#D9DDFE] rounded-[15px] px-4 text-base text-gray-500 placeholder:text-sm placeholder:text-gray-400 placeholder:tracking-widest placeholder:relative placeholder:top-0 placeholder:left-1.5 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                            <textarea placeholder="Your inquiry here"
+                                                class="w-full h-[240px] border border-[#D9DDFE] rounded-[15px] px-4 py-4 text-base text-gray-500 placeholder:text-sm placeholder:text-gray-400 placeholder:tracking-widest placeholder:relative placeholder:top-2 placeholder:left-1.5 resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                                            <div class="pt-1">
+                                                <a href="#"
+                                                    class="px-10 py-2.5 border-2 border-primary bg-primary text-white font-semibold text-base tracking-widest rounded-full w-[250px] h-14 inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-primary">Send
+                                                    Message</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="relative w-full overflow-hidden bg-footer-bg mt-[-103px]">
+            <div class="absolute inset-0 bg-footer-pattern bg-cover bg-center">
+                <img src="./assets/FooterBG.svg" alt="">
+            </div>
+            <div class="relative z-10 py-16 w-full">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-44 w-full">
+                        <!-- Logo + Address info -->
+                        <div class="flex flex-col gap-4 w-full lg:max-w-[50%] -ml-6">
+                            <img src="./assets/Footer Logo.svg" alt="Footer Logo" class="w-64 h-auto">
+                            <div class="flex flex-col w-full pl-7 pt-[20px]">
+                                <p class="text-base text-[#D7DBFF] leading-[21px] font-light tracking-widest">
+                                    <strong class="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
+                                </p>
+                                <p
+                                    class="text-sm text-[#D7DBFF] font-medium italic pt-[22.5px] pl-[1px] tracking-widest">
+                                    Baker Steet 101, NY, United States.
+                                </p>
+                                <div class="flex flex-col sm:flex-row pt-[6px]">
+                                    <p class="text-sm text-[#D7DBFF] font-medium italic tracking-widest">
+                                        +521 569 8966.
+                                    </p>
+                                    <p
+                                        class="text-sm text-[#D7DBFF] font-medium italic sm:pl-[42px] tracking-widest underline">
+                                        mail@company.com.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pages and Information -->
+                        <div class="flex flex-col w-full lg:max-w-[50%]">
+                            <div class="flex flex-col sm:flex-row justify-between gap-8">
+                                <!-- Pages -->
+                                <div class="flex flex-col ml-12 -mt-4 gap-6">
+                                    <div class="font-semibold text-lg text-white tracking-widest pb-2">Pages</div>
+                                    <ul class="flex flex-col gap-[11px] -mt-1 ml-1 list-none p-0">
+                                        <li class="flex items-center gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/home2"
+                                                class="text-[#D7DBFF] tracking-wider hover:text-white transition-colors">Home</a>
+                                        </li>
+                                        <li class="flex items-center gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/about"
+                                                class="text-[#D7DBFF] tracking-wider hover:text-white transition-colors">About</a>
+                                        </li>
+                                        <li class="flex items-center gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/services"
+                                                class="text-[#D7DBFF] tracking-widest hover:text-white transition-colors">Services</a>
+                                        </li>
+                                        <li class="flex items-center gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/gallery"
+                                                class="text-[#D7DBFF] tracking-widest hover:text-white transition-colors">Gallery</a>
+                                        </li>
+                                        <li class="flex items-center gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/team"
+                                                class="text-[#D7DBFF] tracking-wider hover:text-white transition-colors">Team</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Information -->
+                                <div class="flex flex-col -mr-3 -mt-4 gap-6">
+                                    <div class="font-semibold text-lg text-white tracking-widest pb-2">Informations
+                                    </div>
+                                    <ul class="flex flex-col gap-[10px] -mt-1 list-none p-0">
+                                        <li class="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/terms"
+                                                class="text-[#D7DBFF] hover:text-white transition-colors">Terms &
+                                                conditions</a>
+                                        </li>
+                                        <li class="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/privacy"
+                                                class="text-[#D7DBFF] hover:text-white transition-colors">Privacy
+                                                policy</a>
+                                        </li>
+                                        <li class="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/blog"
+                                                class="text-[#D7DBFF] hover:text-white transition-colors">Blog</a>
+                                        </li>
+                                        <li class="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                                            <img src="./assets/caret-right.svg" alt="Caret" class="w-[13px] h-[13px]">
+                                            <a href="/contact"
+                                                class="text-[#D7DBFF] hover:text-white transition-colors">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social icon + copyright -->
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10 pt-7 w-full -mt-10 -ml-7">
+                        <div class="flex gap-x-4 sm:gap-x-7 mb-4 -ml-3 sm:mb-0 flex-wrap justify-center">
+                            <img src="./assets/FacebookWhite.svg" alt="Facebook" class="w-7 h-7 m-2">
+                            <img src="./assets/TwitterWhite.svg" alt="Twitter" class="w-7 h-7 m-2">
+                            <img src="./assets/LinkedinWhite.svg" alt="LinkedIn" class="w-7 h-7 m-2">
+                            <img src="./assets/YoutubeWhite.svg" alt="YouTube" class="w-7 h-7 m-2">
+                            <img src="./assets/InstagramWhite.svg" alt="Instagram" class="w-7 h-7 m-2">
+                        </div>
+                        <div class="text-base -mr-14 tracking-widest text-[#D7DBFF] text-center sm:text-right">
+                            © AltDesain Studio 2021 - All right reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ScrollTop Button -->
+            <button id="scrollTopBtn" aria-label="Scroll to top"
+                class="fixed bottom-48 right-16 w-auto h-auto absolute top-[500px] z-50 shadow-2xl shadow-black hover:opacity-80 active:opacity-70 transition-opacity duration-300">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="36" height="36" rx="5" fill="#FF64AE" />
+                    <path
+                        d="M11.3519 19.1775L10.5715 18.3971C10.241 18.0666 10.241 17.5322 10.5715 17.2053L17.4023 10.3709C17.7328 10.0404 18.2672 10.0404 18.5941 10.3709L25.425 17.2018C25.7554 17.5322 25.7554 18.0666 25.425 18.3936L24.6445 19.174C24.3105 19.508 23.7656 19.501 23.4386 19.16L19.4062 14.9271V25.0311C19.4062 25.4986 19.0301 25.8748 18.5625 25.8748H17.4375C16.9699 25.8748 16.5937 25.4986 16.5937 25.0311V14.9271L12.5578 19.1635C12.2308 19.508 11.6859 19.515 11.3519 19.1775Z"
+                        fill="white" />
+                </svg>
+            </button>
+        </footer>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-end p-4">
+                <button>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTggNkw2IDE4IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYX0gZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4="
+                        alt="Close" />
+                </button>
+            </div>
+            <nav class="p-4 flex flex-col space-y-4">
+                <a href="/home2" class="text-primary font-medium">Home +</a>
+                <a href="/about" class="text-gray font-medium">About</a>
+                <a href="/services" class="text-gray font-medium">Service</a>
+                <a href="/gallery" class="text-gray font-medium">Gallery</a>
+                <a href="/blog" class="text-gray font-medium">Blog</a>
+                <a href="/contact"
+                    class="px-10 py-2.5 border-2 border-primary bg-primary text-white font-semibold text-base tracking-widest rounded-full h-13 inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-primary">Contact</a>
+            </nav>
+        </div>
+
+        <!-- ScrollTop Button
+        <button id="scrollTopBtn" aria-label="Scroll to top"
+            class="fixed bottom-14 ss:bottom-10 z-30 right-10 transition-all duration-500 shadow-2xl shadow-black hover:opacity-80 active:opacity-70 opacity-0">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="5" fill="#FF64AE" />
+                <path
+                    d="M11.3519 19.1775L10.5715 18.3971C10.241 18.0666 10.241 17.5322 10.5715 17.2053L17.4023 10.3709C17.7328 10.0404 18.2672 10.0404 18.5941 10.3709L25.425 17.2018C25.7554 17.5322 25.7554 18.0666 25.425 18.3936L24.6445 19.174C24.3105 19.508 23.7656 19.501 23.4386 19.16L19.4062 14.9271V25.0311C19.4062 25.4986 19.0301 25.8748 18.5625 25.8748H17.4375C16.9699 25.8748 16.5937 25.4986 16.5937 25.0311V14.9271L12.5578 19.1635C12.2308 19.508 11.6859 19.515 11.3519 19.1775Z"
+                    fill="white" />
+            </svg>
+        </button> -->
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
