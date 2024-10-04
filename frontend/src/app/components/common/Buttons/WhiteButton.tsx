@@ -4,6 +4,7 @@ import Link from 'next/link';
 interface WhiteButtonProps {
   href: string;
   children: React.ReactNode;
+  className: string;
 }
 
 const WhiteButton: React.FC<WhiteButtonProps> = ({ href, children }) => {

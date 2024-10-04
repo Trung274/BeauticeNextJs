@@ -6,6 +6,7 @@ interface PinkButtonProps {
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   children: React.ReactNode;
+  className?: string;
 }
 
 const PinkButton: React.FC<PinkButtonProps> = ({ href, type, onClick, children }) => {

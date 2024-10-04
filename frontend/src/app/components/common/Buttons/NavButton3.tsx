@@ -4,6 +4,7 @@ interface NavButtonProps {
   href: string;
   children: React.ReactNode;
   isHome?: boolean;
+  className?: string;
 }
 
 const NavButton: React.FC<NavButtonProps> = ({ href, children, isHome = false }) => {

@@ -91,11 +91,11 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getContentPositionClass = () => {
     switch (professional.position) {
       case 'left':
-        return 'ml-12';
+        return 'left-[99px]';
       case 'right':
-        return '-ml-12';
+        return 'right-[99px]';
       default:
-        return '';
+        return 'left-0 right-0';
     }
   };
 

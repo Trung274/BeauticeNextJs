@@ -10,19 +10,19 @@ const ContactUs: React.FC = () => (
       </div>
 
       <div className="flex flex-col gap-y-5">
-      <div className="flex flex-col gap-y-5 pl-24">
-          <div className="text-base tracking-wide pl-1 font-semibold text-[#FF64AE]">
+        <div className="flex flex-col gap-y-5 pl-24">
+          <div className="text-base tracking-wide -ml-[2px] font-semibold text-[#FF64AE]">
             Contact Us
           </div>
-          <div className="text-4xl pl-1 font-semibold text-[#091156] ">
-            Send your inquiry to <br />
-            our expert team
+          <div className="text-4xl -mt-2 -ml-[2px] font-semibold text-[#091156] ">
+            <span className="block">Send your inquiry to</span>
+            <span className="block mt-[6px]">our expert team</span>
           </div>
-          <div className="text-base pl-1 font-light text-[#8B8B8B] mb-[12px] tracking-widest">
+          <div className="text-base mt-[2px] -ml-1 pl-1 font-light text-[#8B8B8B] mb-[12px] tracking-widest">
             Lorem ipsum dolor sit amet nulla turapis tellus.
           </div>
-          <div className='flex flex-col pt-4 -mr-2'>
-          <ContactUsForm />
+          <div className='flex flex-col pt-4 -mr-[19px]'>
+            <ContactUsForm />
           </div>
         </div>
       </div>

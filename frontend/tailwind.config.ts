@@ -18,6 +18,10 @@ const config: Config = {
       spacing: {
         '15': '3.75rem', // This is equivalent to 60px (15 * 4px)
       },
+      letterSpacing: {
+        'wider-plus': '0.095rem',
+        'widest-plus': '0.19em'
+      },
     },
   },
   plugins: [

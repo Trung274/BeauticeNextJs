@@ -13,7 +13,7 @@ const MainSlider: React.FC = () => (
           It is a long established fact that a reader will be <br /> by the
           readable content of a page.
         </div>
-        <div className='pt-4'>
+        <div className='pt-[18px]'>
           <PinkButton href='#'>More Details</PinkButton>
         </div>
       </div>
@@ -22,7 +22,7 @@ const MainSlider: React.FC = () => (
       </div>
     </div>
 
-    <div className='pt-32'>
+    <div className='pt-[135px]'>
       <SliderButton />
     </div>
   </div>

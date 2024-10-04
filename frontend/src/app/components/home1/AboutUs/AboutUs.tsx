@@ -7,10 +7,10 @@ import Link from 'next/link'
 const AboutUs = () => (
   <div className="flex flex-wrap w-full justify-between items-start">
     <div className="flex flex-col mt-16 gap-y-3 w-full md:w-[55%]">
-      <div className="flex flex-col ml-6 gap-y-4">
+      <div className="flex flex-col ml-6 gap-y-3">
         <div className="text-base mt-3 font-semibold text-[#FF64AE]">About Us</div>
         <div className="text-4xl text-[#091156] font-semibold">We are the best beauty clinic</div>
-        <div className="text-base tracking-widest font-medium text-[#8B8B8B] w-[76%]">
+        <div className="text-base mt-[10px] -ml-[2px] tracking-wider-plus font-medium text-[#8B8B8B] w-[76%]">
           Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Elit,
           quam suscipit purus donec <br /> amet. Egestas volutpat facilisi eu
           libero. Nunc, <br /> ipsum ornare mauris sit quam quis enim. Varius <br />
@@ -22,11 +22,11 @@ const AboutUs = () => (
         </div>
       </div>
 
-      <div className="flex flex-row max-md:flex-col ml-7 mt-10">
+      <div className="flex flex-row max-md:flex-col ml-[22px] mt-10">
         <div className=''>
-        <PinkButton href="/learn-more">Learn More</PinkButton>
+        <a href="/learn-more" className='px-10 py-2.5 border-2 border-[#ff64ae] bg-[#ff64ae] text-white font-semibold text-base tracking-widest rounded-full h-[60px] w-[200px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff64ae]'>Learn More</a>
         </div>
-        <div className="flex flex-row items-center pl-12 place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
+        <div className="flex flex-row items-center pl-11 place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
           <svg
             width="49"
             height="50"
@@ -42,12 +42,12 @@ const AboutUs = () => (
               fill="white"
             />
           </svg>
-          <div className='text-xl tracking-normal font-medium text-[#8B8B8B]'>Watch Video</div>
+          <div className='text-lg ml-1 tracking-wider font-medium text-[#8B8B8B]'>Watch Video</div>
         </div>
       </div>
       
     </div>
-    <div className="w-full mt-11 mr-8 md:w-[45%] md:max-w-none md:-ml-8">
+    <div className="w-full mt-[45px] mr-8 md:w-[45%] md:max-w-none md:-ml-8">
         <ThumbnailAboutUsSVG />
     </div>
   </div>

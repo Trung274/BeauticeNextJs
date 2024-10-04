@@ -3,8 +3,8 @@ import React from "react";
 const ThumbnailAboutUs: React.FC = () => (
 
 <svg 
-width="120%" 
-height="120%" 
+width="626" 
+height="500" 
 viewBox="0 0 626 500" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d_101_4419)">
 <rect x="75" y="75" width="476" height="350" rx="50" fill="#C4C4C4"/>

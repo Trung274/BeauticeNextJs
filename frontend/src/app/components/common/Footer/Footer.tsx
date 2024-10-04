@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
 
     <div className="relative z-10 py-16 w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-44 w-full">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-[174px] w-full">
           {/* Logo + Address info */}
           <div className="flex flex-col gap-4 pt-1 w-full lg:max-w-[50%] -ml-[1.6rem]">
             <FooterLogo />
@@ -28,14 +28,14 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
               <p className="text-base text-[#D7DBFF] leading-[21px] font-regular tracking-widest text-wrap">
                 <strong className="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
               </p>
-              <p className="text-sm text-[#D7DBFF] leading-6 font-medium-italic pt-[22.5px] pl-[1px] tracking-widest">
+              <p className="text-sm text-[#D7DBFF] leading-6 font-medium italic pt-[22px] pl-[1px] tracking-widest">
                 Baker Steet 101, NY, United States.
               </p>
               <div className="flex flex-col sm:flex-row">
-                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium-italic tracking-widest">
+                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium italic tracking-widest">
                   +521 569 8966.
                 </p>
-                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium-italic sm:pl-[42px] tracking-widest underline">
+                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium italic sm:pl-[44px] tracking-widest underline">
                   mail@company.com.
                 </p>
               </div>
@@ -51,44 +51,44 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
                 <ul className="flex flex-col gap-[10px] -mt-1 list-none p-0">
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
                     <CaretRight />
-                    <a href="/home2">Home</a>
+                    <a href="/home2" className='ml-1 tracking-wider-plus'>Home</a>
                   </li>
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
                     <CaretRight />
-                    <a href="/about">About</a>
+                    <a href="/about" className='ml-1 tracking-wider-plus'>About</a>
                   </li>
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
                     <CaretRight />
-                    <a href="/services">Services</a>
+                    <a href="/services" className='ml-1 tracking-wider-plus'>Services</a>
                   </li>
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
                     <CaretRight />
-                    <a href="/gallery">Gallery</a>
+                    <a href="/gallery" className='ml-1 mt-1 tracking-wider-plus'>Gallery</a>
                   </li>
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
                     <CaretRight />
-                    <a href="/team">Team</a>
+                    <a href="/team" className='ml-1 tracking-wider-plus'>Team</a>
                   </li>
                 </ul>
               </div>
 
               {/* Information */}
               <div className="flex flex-col -mr-3 -mt-3 gap-6">
-                <div className="font-semibold text-lg text-[#ffffff] tracking-widest pb-2">Informations</div>
-                <ul className="flex flex-col gap-3 -mt-1 list-none p-0">
+                <div className="font-semibold text-lg text-[#ffffff] tracking-widest -ml-[2px] pb-2">Informations</div>
+                <ul className="flex flex-col gap-[11px] -mt-1 list-none p-0">
                   <li className="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/terms">Terms & conditions</a>
                   </li>
-                  <li className="flex items-center gap-1 text-[#D7DBFF]">
+                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/privacy">Privacy policy</a>
                   </li>
-                  <li className="flex items-center gap-1 text-[#D7DBFF]">
+                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/blog">Blog</a>
                   </li>
-                  <li className="flex items-center gap-1 text-[#D7DBFF]">
+                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/contact">Contact</a>
                   </li>
