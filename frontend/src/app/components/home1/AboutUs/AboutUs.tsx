@@ -24,7 +24,7 @@ const AboutUs = () => (
 
       <div className="flex flex-row max-md:flex-col ml-[22px] mt-10">
         <div className=''>
-        <a href="/learn-more" className='px-10 py-2.5 border-2 border-[#ff64ae] bg-[#ff64ae] text-white font-semibold text-base tracking-widest rounded-full h-[60px] w-[200px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff64ae]'>Learn More</a>
+          <a href="/learn-more" className='px-10 py-2.5 border-2 border-[#ff64ae] bg-[#ff64ae] text-white font-semibold text-base tracking-widest rounded-full h-[60px] w-[200px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff64ae]'>Learn More</a>
         </div>
         <div className="flex flex-row items-center pl-11 place-content-center max-md:pl-0 max-md:place-content-start max-md:mt-4">
           <svg
@@ -45,10 +45,10 @@ const AboutUs = () => (
           <div className='text-lg ml-1 tracking-wider font-medium text-[#8B8B8B]'>Watch Video</div>
         </div>
       </div>
-      
+
     </div>
-    <div className="w-full mt-[45px] mr-8 md:w-[45%] md:max-w-none md:-ml-8">
-        <ThumbnailAboutUsSVG />
+    <div className="w-full mt-[45px] mr-8 md:w-[45%] md:max-w-none md:-ml-8 transform -translate-x-2">
+      <ThumbnailAboutUsSVG />
     </div>
   </div>
 )

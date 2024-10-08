@@ -15,17 +15,20 @@ interface ServiceCardProps {
 
 // ServiceCard component
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
-  <div className="bg-white rounded-3xl overflow-hidden shadow-white shadow-2xl p-6 w-[343px] h-[440px]">
-    <div className="flex flex-col pt-5 items-center text-center h-full">
-      <Image
-        src={service.icon}
-        alt={service.title}
-        width={160}
-        height={160}
-        className="mb-6"
-      />
-      <h3 className="text-[#091156] text-[18px] font-bold tracking-normal mt-[35px] mb-3">{service.title}</h3>
-      <p className="text-[#8B8B8B] tracking-widest text-sm mt-2 px-4">{service.description}</p>
+  <div className="relative group">
+    <div className="absolute inset-0 bg-white rounded-[42px] blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+    <div className="relative bg-white rounded-3xl overflow-hidden p-6 w-[343px] h-[440px] z-10">
+      <div className="flex flex-col pt-5 items-center text-center h-full">
+        <Image
+          src={service.icon}
+          alt={service.title}
+          width={160}
+          height={160}
+          className="mb-6"
+        />
+        <h3 className="text-[#091156] text-[18px] font-bold tracking-normal mt-[33px] mb-3">{service.title}</h3>
+        <p className="text-[#8B8B8B] tracking-widest text-sm mt-2 px-4">{service.description}</p>
+      </div>
     </div>
   </div>
 );

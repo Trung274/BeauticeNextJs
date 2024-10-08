@@ -2,7 +2,7 @@ import React from 'react';
 
 const CaretRight: React.FC = () => {
   return (
-    <div className="mt-[5px]">
+    <div className="mt-[-2px]">
       <svg
         width="13"
         height="13"

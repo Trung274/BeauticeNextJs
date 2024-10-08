@@ -99,9 +99,15 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
     }
   };
 
+  const getShadowClass = () => {
+    return professional.position === 'center' 
+      ? 'drop-shadow-[0_8px_30px_rgba(0,0,0,0.05)]' 
+      : '';
+  };
+
   return (
     <div className="flex">
-      <div className="relative w-[424px] h-[626px] bg-white rounded-[42px]">
+      <div className={`relative w-[424px] h-[626px] bg-white rounded-[42px] ${getShadowClass()}`}>
         <Image
           src={professional.avatarSrc}
           alt={professional.role}

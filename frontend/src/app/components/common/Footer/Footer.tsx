@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
                 <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium italic tracking-widest">
                   +521 569 8966.
                 </p>
-                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium italic sm:pl-[44px] tracking-widest underline">
+                <p className="text-sm text-[#D7DBFF] leading-[24px] font-medium sm:pl-[44px] tracking-widest underline">
                   mail@company.com.
                 </p>
               </div>
@@ -73,22 +73,22 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
               </div>
 
               {/* Information */}
-              <div className="flex flex-col -mr-3 -mt-3 gap-6">
-                <div className="font-semibold text-lg text-[#ffffff] tracking-widest -ml-[2px] pb-2">Informations</div>
-                <ul className="flex flex-col gap-[11px] -mt-1 list-none p-0">
-                  <li className="flex items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+              <div className="flex flex-col -mr-8 -mt-3 gap-6 min-w-[220px]">
+                <div className="font-semibold text-lg text-[#ffffff] tracking-widest -ml-[1px] pb-2">Informations</div>
+                <ul className="flex flex-col gap-[11px] -mt-[5px] list-none p-0">
+                  <li className="flex -ml-[1px] items-center text-base tracking-widest gap-2 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/terms">Terms & conditions</a>
                   </li>
-                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                  <li className="flex -ml-[1px] items-center text-base tracking-widest gap-2 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/privacy">Privacy policy</a>
                   </li>
-                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                  <li className="flex -ml-[1px] items-center text-base tracking-widest gap-2 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/blog">Blog</a>
                   </li>
-                  <li className="flex ml-[2px] items-center text-base tracking-widest gap-1 text-[#D7DBFF]">
+                  <li className="flex -ml-[1px] items-center text-base tracking-widest gap-2 text-[#D7DBFF]">
                     <CaretRight />
                     <a href="/contact">Contact</a>
                   </li>

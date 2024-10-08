@@ -5,7 +5,7 @@ import ContactUsForm from './ContactForm'
 const ContactUs: React.FC = () => (
   <div className="flex flex-col mb-28 justify-center">
     <div className="flex flex-wrap flex-row justify-center max-md:flex-col px-4">
-      <div className="flex max-md:w-full -ml-3 mt-40">
+      <div className="flex max-md:w-full -ml-3 mt-[161px] relative right-[6px]">
         <AnimationContactUs />
       </div>
 
