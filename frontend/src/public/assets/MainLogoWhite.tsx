@@ -4,9 +4,9 @@ import Link from 'next/link';
 const MainLogoWhite: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <Link href="/">
 <svg
-    width="258"
-    height="63"
-    viewBox="0 0 230.342 71"
+    width="262"
+    height="71"
+    viewBox="0 0 262 71"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

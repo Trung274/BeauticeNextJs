@@ -7,25 +7,28 @@ import BgSliderSVG from '@/public/assets/BgSlider.svg'
 import PlayButtonSVG from '@/public/assets/PlayButton.svg'
 
 const MainSlider: React.FC = () => (
-  <div className="relative w-full min-h-screen">
+  <div className="flex flex-col justify-center pt-4">
     {/* Content */}
-    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen p-4 md:p-8">
+    <div className="flex flex-row pt-[90px] max-md:flex-col">
       {/* Left Content */}
-      <div className="w-full md:w-1/2 text-white mb-8 md:mb-0">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-          Your beauty center <br /> place
-        </h1>
-        <p className="text-sm md:text-base mb-6 max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing 
-          elit. Commodo, massa pellentesque arcu fusce et
-          magna consequat neque vitae lobortis.
+      <div className="w-full md:w-1/2 ml-[38px] text-white mb-8 md:mb-0">
+      <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
+          <span className="block">Your beauty center</span>
+          <span className="block mt-[12px]">place</span>
+        </div>
+        <p className="text-sm tracking-widest md:text-base mb-6 mt-5 max-w-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing <br />
+          elit. Commodo, massa pellentesque arcu fusce et <br />
+          magna consequat neque vitae lobortis. <br />
         </p>
+        <div className='flex mt-10'>
         <WhiteButton href='#'>More Details</WhiteButton>
+        </div>
       </div>
 
       {/* Right Content - Tour Video */}
-      <div className="w-full md:w-1/2 flex justify-center items-center">
-        <a href="#" className="group w-1/2 md:w-2/5 aspect-square relative">
+      <div className="w-full md:w-1/2 flex justify-center items-center -ml-[64px] -mt-[10px]">
+        <a href="#" className="group w-[58%] md:w-[48%] aspect-square relative">
           <Image
             src={PlayButtonSVG}
             alt="Tour Video"

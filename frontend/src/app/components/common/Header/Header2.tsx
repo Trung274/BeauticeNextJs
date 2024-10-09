@@ -12,6 +12,7 @@ type MenuItem = {
   label: string;
   isHome?: boolean;
   isPink?: boolean;
+  spacing?: string;
 };
 
 const Header1 = () => {
@@ -34,19 +35,29 @@ const Header1 = () => {
   };
 
   const menuItems: MenuItem[] = [
-    { href: '/home2', label: 'Home +', isHome: true },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Service' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/home2', label: 'Home +', isHome: true, spacing: 'mr-[38px]' },
+    { href: '/about', label: 'About', spacing: 'mr-11' },
+    { href: '/services', label: 'Service', spacing: 'mr-11' },
+    { href: '/gallery', label: 'Gallery', spacing: 'mr-[46px]' },
+    { href: '/blog', label: 'Blog', spacing: 'mr-[51px]' },
     { href: '/contact', label: 'Contact', isPink: true }
   ];
 
   const renderMenuItem = (item: MenuItem) => {
+    const itemClasses = `${item.spacing || ''} tracking-widest`;
+
     if (item.isPink) {
-      return <PinkButton0 key={item.href} href={item.href}>{item.label}</PinkButton0>;
+      return (
+        <div className={itemClasses}>
+          <PinkButton0 key={item.href} href={item.href}>{item.label}</PinkButton0>
+        </div>
+      );
     }
-    return <NavButton2 key={item.href} href={item.href} isHome={item.isHome}>{item.label}</NavButton2>;
+    return (
+      <div className={itemClasses}>
+        <NavButton2 key={item.href} href={item.href} isHome={item.isHome}>{item.label}</NavButton2>
+      </div>
+    );
   };
 
   // Updated avatar URL with custom color
@@ -56,11 +67,11 @@ const Header1 = () => {
     <header className="w-full relative pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center space-x-1.5 py-4">
-          <div className="flex-shrink-0 pl-8 pt-1">
+          <div className="flex-shrink-0 pl-[38px] pt-1">
             <MainLogoWhite />
           </div>
-          
-          <nav className="hidden md:flex items-center space-x-[52px] pb-1 pr-9">
+
+          <nav className="hidden md:flex items-center pb-2 pr-9">
             {menuItems.map(renderMenuItem)}
             {/* {user ? (
               <div className="relative">
@@ -89,10 +100,9 @@ const Header1 = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
-        className={`fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden`}
+      <div
+        className={`fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } md:hidden`}
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-4">
@@ -129,8 +139,8 @@ const Header1 = () => {
       </div>
 
       {isMenuOpen && (
-        <div 
-          className="fixed inset-0 md:hidden" 
+        <div
+          className="fixed inset-0 md:hidden"
           onClick={toggleMenu}
         ></div>
       )}

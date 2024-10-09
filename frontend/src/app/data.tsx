@@ -20,6 +20,9 @@ import Location from '@/public/assets/Location.svg'
 import BeautyConsultationIcon from '@/public/assets/consu2.svg'
 import SkinTreatmentsIcon from '@/public/assets/treat2.svg'
 import BeautyProductIcon from '@/public/assets/pro2.svg'
+import pic1 from '@/public/assets/pic1.svg'
+import pic2 from '@/public/assets/pic2.svg'
+import pic3 from '@/public/assets/pic3.svg'
 
 
 export const BLOG_ARTICLES = [
@@ -138,7 +141,6 @@ export const CONTACT_INFO = [
   },
 ];
 
-// Services
 export const SERVICES = [
   {
     icon: Consultation,
@@ -161,16 +163,37 @@ export const SERVICES2 = [
   {
     icon: BeautyConsultationIcon,
     title: "Beauty consultation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet, neque.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
   },
   {
     icon: SkinTreatmentsIcon,
     title: "Skin treatments",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet, neque.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
   },
   {
     icon: BeautyProductIcon,
     title: "Beauty product",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet, neque.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+  },
+];
+
+export const ARTICLES = [
+  {
+    image: pic1,
+    category: 'Consultation',
+    title: 'How much does a consultation cost at our clinic?',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings ...',
+  },
+  {
+    image: pic2,
+    category: 'Beauty',
+    title: 'Watch out! don\'t choose the wrong beauty product',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings ...',
+  },
+  {
+    image: pic3,
+    category: 'Treatments',
+    title: 'About skin care you need to know',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings ...',
   },
 ];

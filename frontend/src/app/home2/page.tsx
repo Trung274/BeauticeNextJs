@@ -5,27 +5,42 @@ import Why from "../components/home2/Why/Why";
 import TheBlog from "../components/home2/TheBlog/TheBlog";
 import Request from "../components/home2/Request/Request";
 
+// Import SVGs
+import WaveLine0 from '../../public/assets/WaveLine0.svg';
+import WaveLine from '../../public/assets/WaveLine.svg';
+import BGElements from '../../public/assets/BG-Elements.svg';
+
 export default function Home2() {
   return (
-    <main className="flex flex-col">
-      <section className="w-full">
-        <MainSlider />
-      </section>
-      <section className="w-full max-w-7xl mx-auto py-20">
-        <AboutUs />
-      </section>
-      <section className="w-full max-w-7xl mx-auto py-20">
-        <MainServices />
-      </section>
-      <section className="w-full max-w-7xl mx-auto py-20">
-        <Why />
-      </section>
-      <section className="w-full max-w-7xl mx-auto px-4 py-20">
-        <TheBlog />
-      </section>
-      <section className="w-full max-w-7xl mx-auto px-4 py-20">
-        <Request />
-      </section>
-    </main>
+    <>
+      {/* Background SVGs */}
+      < div className="absolute top-0 left-0 right-0 -z-10" >
+        <img src={WaveLine0.src} alt="" className="w-auto h-auto absolute top-[1927px] left-0" />
+        <img src={WaveLine.src} alt="" className="w-auto h-auto absolute top-[2886px] right-0" />
+        <img src={BGElements.src} alt="" className="w-auto h-auto absolute top-[3817px] left-0" />
+      </div >
+
+      {/* Main content */}
+      < main className="flex flex-col" >
+        <section className="w-full max-w-7xl mx-auto py-20">
+          <MainSlider />
+        </section>
+        <section className="w-full max-w-7xl mx-auto py-20 pt-[390px]">
+          <AboutUs />
+        </section>
+        <section className="w-full max-w-7xl mx-auto py-16">
+          <MainServices />
+        </section>
+        <section className="w-full max-w-7xl mx-auto py-16">
+          <Why />
+        </section>
+        <section className="w-full max-w-7xl mx-auto py-16">
+          <TheBlog />
+        </section>
+        <section className="w-full max-w-7xl mx-auto py-16 pb-[177px]">
+          <Request />
+        </section>
+      </main >
+    </>
   );
 }
