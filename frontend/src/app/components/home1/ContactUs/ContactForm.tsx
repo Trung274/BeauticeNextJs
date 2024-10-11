@@ -17,9 +17,9 @@ const TextArea = ({ ...props }) => (
 
 const ContactUsForm: React.FC = () => (
   <form className="w-full max-w-[520px] space-y-10">
-    <div className="flex space-x-10">
-      <InputField type="text" placeholder="First name" />
-      <InputField type="text" placeholder="Last name" />
+    <div className="flex flex-col sm:flex-row sm:space-x-10 space-y-10 sm:space-y-0">
+      <InputField type="text" placeholder="First name" className="w-full" />
+      <InputField type="text" placeholder="Last name" className="w-full" />
     </div>
     <InputField type="email" placeholder="Email address" />
     <InputField type="text" placeholder="Subject message" />

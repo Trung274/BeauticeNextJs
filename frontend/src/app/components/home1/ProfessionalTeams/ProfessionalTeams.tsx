@@ -1,5 +1,3 @@
-// 
-
 import React from 'react';
 import ProfessionalCard, { Professional } from './ProfessionalCard';
 import DermatologistSVG from '@/public/assets/DermatologistAvatar.svg';

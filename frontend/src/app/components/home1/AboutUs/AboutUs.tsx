@@ -47,8 +47,10 @@ const AboutUs = () => (
       </div>
 
     </div>
-    <div className="w-full mt-[45px] mr-8 md:w-[45%] md:max-w-none md:-ml-8 transform -translate-x-2">
-      <ThumbnailAboutUsSVG />
+    <div className="w-full mt-[45px] mr-8 md:w-[45%] md:max-w-none md:-ml-8 flex justify-center md:justify-end">
+      <div className="w-full h-full transform origin-center scale-50 md:scale-100 -translate-x-15 md:translate-x-0">
+        <ThumbnailAboutUsSVG />
+      </div>
     </div>
   </div>
 )

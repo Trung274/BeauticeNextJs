@@ -17,12 +17,14 @@ const MainSlider: React.FC = () => (
           <PinkButton href='#'>More Details</PinkButton>
         </div>
       </div>
-      <div className='pr-6 pt-2'> 
-        <AnimationSlider />
+      <div className='w-full md:w-1/2 flex justify-center md:justify-end items-center pt-8 md:-ml-9 md:pt-2'> 
+        <div className="w-full md:w-full h-full transform origin-center scale-50 md:scale-100">
+          <AnimationSlider />
+        </div>
       </div>
     </div>
 
-    <div className='pt-[135px]'>
+    <div className='pt-16 md:pt-[135px]'>
       <SliderButton />
     </div>
   </div>

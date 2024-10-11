@@ -10,7 +10,7 @@ const ContactUs: React.FC = () => (
       </div>
 
       <div className="flex flex-col gap-y-5">
-        <div className="flex flex-col gap-y-5 pl-24">
+        <div className="flex flex-col gap-y-5 md:pl-24">
           <div className="text-base tracking-wide -ml-[2px] font-semibold text-[#FF64AE]">
             Contact Us
           </div>

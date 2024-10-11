@@ -101,7 +101,7 @@ const Header1 = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           } md:hidden`}
       >
         <div className="flex flex-col h-full">
@@ -112,25 +112,29 @@ const Header1 = () => {
               </svg>
             </button>
           </div>
-          <nav className="flex-grow pl-40">
-            <ul className="px-4 space-y-4">
+          <nav className="flex-grow overflow-y-auto">
+            <ul className="px-6 space-y-6 mt-6">
               {menuItems.map((item) => (
-                <li key={item.href} onClick={toggleMenu}>
-                  {renderMenuItem(item)}
+                <li key={item.href} onClick={toggleMenu} className="w-full">
+                  {item.isPink ? (
+                    <PinkButton0 href={item.href} className="w-full justify-center">{item.label}</PinkButton0>
+                  ) : (
+                    <NavButton href={item.href} isHome={item.isHome} className="w-full justify-start">{item.label}</NavButton>
+                  )}
                 </li>
               ))}
               {user ? (
                 <>
                   <li>
-                    <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                    <a href="/profile" className="block py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
                   </li>
                   <li>
-                    <button onClick={handleLogout} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</button>
+                    <button onClick={handleLogout} className="block w-full text-left py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</button>
                   </li>
                 </>
               ) : (
                 <li>
-                  <PinkButton0 href="/auth/login" onClick={toggleMenu}>Login / Register</PinkButton0>
+                  <PinkButton0 href="/auth/login" onClick={toggleMenu} className="w-full justify-center">Login / Register</PinkButton0>
                 </li>
               )}
             </ul>
@@ -138,9 +142,10 @@ const Header1 = () => {
         </div>
       </div>
 
+      {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
           onClick={toggleMenu}
         ></div>
       )}

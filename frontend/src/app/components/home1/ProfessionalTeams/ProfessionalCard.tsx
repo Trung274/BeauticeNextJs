@@ -80,9 +80,9 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getAvatarPositionClass = () => {
     switch (professional.position) {
       case 'left':
-        return 'ml-12';
+        return 'lg:ml-12';
       case 'right':
-        return '-ml-12';
+        return 'lg:-ml-12';
       default:
         return '';
     }
@@ -91,9 +91,9 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getContentPositionClass = () => {
     switch (professional.position) {
       case 'left':
-        return 'left-[99px]';
+        return 'lg:left-[99px]';
       case 'right':
-        return 'right-[99px]';
+        return 'lg:right-[99px]';
       default:
         return 'left-0 right-0';
     }
@@ -102,7 +102,7 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getShadowClass = () => {
     return professional.position === 'center' 
       ? 'drop-shadow-[0_8px_30px_rgba(0,0,0,0.05)]' 
-      : '';
+      : 'lg:shadow-none shadow-[0_8px_30px_rgba(0,0,0,0.05)]';
   };
 
   return (
@@ -122,7 +122,7 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
           <div className="text-xl tracking-tighter font-semibold text-[#091156] mt-2">
             {professional.name}
           </div>
-          <div className="text-base font-light tracking-wide text-[#8B8B8B] leading-tight mt-5 ">
+          <div className="text-base font-light tracking-wide text-[#8B8B8B] leading-tight mt-5">
             {professional.description.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}

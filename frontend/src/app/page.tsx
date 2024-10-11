@@ -13,7 +13,7 @@ export default function home1() {
   return (
     <>
       {/* Background SVGs */}
-      <div className="absolute top-0 left-0 right-0 -z-10">
+      <div className="absolute top-0 left-0 right-0 -z-10 hidden lg:block">
         <img src={SlideBackground.src} alt="" className="w-auto h-auto max-w-none" />
         <img src={BackgroundBubble.src} alt="" className="w-auto h-auto absolute top-[1446px] right-0" />
         <img src={BackgroundBubble2.src} alt="" className="w-auto h-auto absolute top-[3143px] left-0" />
@@ -21,23 +21,23 @@ export default function home1() {
 
       {/* Main content */}
       <main className="relative flex flex-col">
-        <section className="w-full mx-auto px-4 py-24">
+        <section className="w-full mx-auto px-4 py-8 md:py-16 lg:py-24">
           <MainSlider />
         </section>
 
-        <section className="w-full mx-auto px-4 pt-8">
+        <section className="w-full mx-auto px-4 pt-4 md:pt-6 lg:pt-8">
           <CoreServices />
         </section>
 
-        <section className="w-full mx-auto px-4 pt-8">
+        <section className="w-full mx-auto px-4 pt-4 md:pt-6 lg:pt-8">
           <AboutUs />
         </section>
 
-        <section className="w-full mx-auto px-4 -mt-1">
+        <section className="w-full mx-auto px-4 mt-0 md:-mt-1">
           <ProfessionalTeams />
         </section>
         
-        <section className="w-full mx-auto px-4 pt-36 pb-1">
+        <section className="w-full mx-auto px-4 pt-16 md:pt-24 lg:pt-36 pb-1">
           <ContactUs />
         </section>
       </main>
