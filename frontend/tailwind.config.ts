@@ -7,6 +7,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1440px',
+    },
     extend: {
       fontFamily: {
         sans: ['var(--font-poppins)', 'sans-serif'],
@@ -28,4 +34,5 @@ const config: Config = {
     require('@tailwindcss/forms'),
   ],
 };
+
 export default config;

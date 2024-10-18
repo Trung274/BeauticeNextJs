@@ -80,9 +80,9 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getAvatarPositionClass = () => {
     switch (professional.position) {
       case 'left':
-        return 'lg:ml-12';
+        return 'xl:ml-12';
       case 'right':
-        return 'lg:-ml-12';
+        return 'xl:-ml-12';
       default:
         return '';
     }
@@ -91,9 +91,9 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   const getContentPositionClass = () => {
     switch (professional.position) {
       case 'left':
-        return 'lg:left-[99px]';
+        return 'xl:left-[99px]';
       case 'right':
-        return 'lg:right-[99px]';
+        return 'xl:right-[99px]';
       default:
         return 'left-0 right-0';
     }

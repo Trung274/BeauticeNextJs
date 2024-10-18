@@ -71,7 +71,7 @@ const Header1 = () => {
             <MainLogo />
           </div>
 
-          <nav className="hidden md:flex items-center pb-1 pr-9">
+          <nav className="hidden xl:flex items-center pb-1 pr-9">
             {menuItems.map(renderMenuItem)}
             {/* {user ? (
               <div className="relative">
@@ -91,18 +91,20 @@ const Header1 = () => {
                 )}
               </div>
             ) : (
-              <PinkButton href="/auth/login">Login / Register</PinkButton>
+              <PinkButton0 href="/auth/login">Login / Register</PinkButton0>
             )} */}
           </nav>
 
-          <ToggleButton onClick={toggleMenu} isOpen={isMenuOpen} />
+          <div className="block xl:hidden">
+            <ToggleButton onClick={toggleMenu} isOpen={isMenuOpen} />
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
         className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          } md:hidden`}
+          } xl:hidden`}
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-4">
@@ -145,7 +147,7 @@ const Header1 = () => {
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 xl:hidden"
           onClick={toggleMenu}
         ></div>
       )}

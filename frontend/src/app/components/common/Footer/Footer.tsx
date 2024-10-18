@@ -23,7 +23,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
         <div className="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-[174px] w-full">
           {/* Logo + Address info */}
           <div className="flex flex-col gap-4 pt-1 w-full lg:max-w-[50%] -ml-[1.6rem]">
+            <div className='ml-6 xl:ml-0'>
             <FooterLogo />
+            </div>
             <div className="flex flex-col w-full pl-[31px] pt-[20px]">
               <p className="text-base text-[#D7DBFF] leading-[21px] font-regular tracking-widest text-wrap">
                 <strong className="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
@@ -46,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
           <div className="flex flex-col w-full lg:max-w-[50%]">
             <div className="flex flex-col sm:flex-row justify-between gap-8">
               {/* Pages */}
-              <div className="flex flex-col ml-12 -mt-3 gap-6">
+              <div className="flex flex-col xl:ml-12 xl:-mt-3 gap-6">
                 <div className="font-semibold text-lg text-[#ffffff] tracking-widest pb-2">Pages</div>
                 <ul className="flex flex-col gap-[10px] -mt-1 list-none p-0">
                   <li className="flex items-center gap-1 text-[#D7DBFF]">
@@ -73,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
               </div>
 
               {/* Information */}
-              <div className="flex flex-col -mr-8 -mt-3 gap-6 min-w-[220px]">
+              <div className="flex flex-col xl:-mr-8 xl:-mt-3 gap-6 min-w-[220px]">
                 <div className="font-semibold text-lg text-[#ffffff] tracking-widest -ml-[1px] pb-2">Informations</div>
                 <ul className="flex flex-col gap-[11px] -mt-[5px] list-none p-0">
                   <li className="flex -ml-[1px] items-center text-base tracking-widest gap-2 text-[#D7DBFF]">
@@ -99,7 +101,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
         </div>
 
         {/* Social icon + copyright */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10 pt-8 w-full -mt-10 -ml-7">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-4 mb-10 pt-8 w-full -mt-10 -ml-7">
           <div className="flex gap-x-7 sm:gap-x-11 ml-1 mt-1 sm:mb-0 flex-wrap justify-center">
             <FacebookWhite />
             <TwitterWhite />

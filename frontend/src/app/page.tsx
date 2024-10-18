@@ -13,10 +13,22 @@ export default function home1() {
   return (
     <>
       {/* Background SVGs */}
-      <div className="absolute top-0 left-0 right-0 -z-10 hidden lg:block">
-        <img src={SlideBackground.src} alt="" className="w-auto h-auto max-w-none" />
-        <img src={BackgroundBubble.src} alt="" className="w-auto h-auto absolute top-[1446px] right-0" />
-        <img src={BackgroundBubble2.src} alt="" className="w-auto h-auto absolute top-[3143px] left-0" />
+      <div className="absolute top-0 left-0 right-0 -z-10 overflow-hidden">
+        <img 
+          src={SlideBackground.src} 
+          alt="" 
+          className="w-full h-auto object-cover lg:object-contain lg:w-auto lg:max-w-none" 
+        />
+        <img 
+          src={BackgroundBubble.src} 
+          alt="" 
+          className="w-1/2 h-auto absolute top-[50%] right-0 lg:w-auto lg:top-[1446px]" 
+        />
+        <img 
+          src={BackgroundBubble2.src} 
+          alt="" 
+          className="w-1/2 h-auto absolute top-[75%] left-0 lg:w-auto lg:top-[3143px]" 
+        />
       </div>
 
       {/* Main content */}

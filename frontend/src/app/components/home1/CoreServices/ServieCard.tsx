@@ -16,8 +16,8 @@ interface ServiceCardProps {
 // ServiceCard component
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
   <div className="relative group">
-    <div className="absolute inset-0 bg-white rounded-[42px] blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-    <div className="relative bg-white rounded-3xl overflow-hidden p-6 w-[343px] h-[440px] z-10">
+    <div className="absolute inset-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 w-full h-full sm:w-[343px] sm:h-[440px] bg-white rounded-[42px] blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+    <div className="relative bg-white rounded-3xl overflow-hidden p-6 w-full sm:w-[343px] h-[440px] z-10">
       <div className="flex flex-col pt-5 items-center text-center h-full">
         <Image
           src={service.icon}
@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
 
 // Main Services component
 const Services: React.FC = () => (
-  <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-14 mt-14">
+  <div className="grid grid-cols-1 xl:grid-cols-3 gap-14 mt-14">
     {SERVICES.map((service, index) => (
       <ServiceCard key={index} service={service} />
     ))}
