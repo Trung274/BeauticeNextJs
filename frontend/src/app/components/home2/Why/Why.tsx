@@ -9,7 +9,7 @@ import AsianBranchSVG from '@/public/assets/AsianBranch.svg';
 import LicensedWorkerSVG from '@/public/assets/LicensedWorker.svg';
 
 const StatItem: React.FC<{ svg: string; alt: string }> = ({ svg, alt }) => (
-  <div className="w-[215px] p-2"> {/* Reduced from w-1/2 to specific width */}
+  <div className="w-[215px] p-2"> 
     <Image src={svg} alt={alt} width={150} height={80} layout="responsive" /> 
   </div>
 );
@@ -19,7 +19,7 @@ const Why: React.FC = () => (
     <img 
       src={WhyBackgroundSVG.src} 
       alt="" 
-      className="absolute left-0 right-0 w-full h-auto object-cover -mt-[33px] -z-10" 
+      className="absolute left-0 right-0 w-full h-[12%] xl:h-auto object-cover -mt-[33px] -z-10" 
     />
     <div className="container mx-auto px-4 py-16">
       <div className="flex flex-col mt-[195px] md:flex-row items-center md:items-start">
@@ -31,7 +31,7 @@ const Why: React.FC = () => (
             Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit ut aliquam, purus sit amet luctus <br /> venenatis.
           </p>
         </div>
-        <div className="md:w-1/2 flex flex-wrap justify-center -ml-[6px] -mt-6 md:justify-end gap-x-[100px] gap-y-5">
+        <div className="md:w-1/2 flex flex-wrap justify-center -ml-[57px] -mt-6 md:justify-end gap-x-[56px] gap-y-[22px]">
           <StatItem svg={TrustedClinicSVG} alt="100% trusted clinic" />
           <StatItem svg={CustomerLoveSVG} alt="99% customer love" />
           <StatItem svg={AsianBranchSVG} alt="75+ asian branch" />

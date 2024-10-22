@@ -24,29 +24,32 @@ const RequestCallServices = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl ml-[35px] pt-4 mx-auto">
-      <div className="w-full md:w-[35%] mb-6 ml-1 -mt-1  md:mb-0">
+    <div className="flex flex-col xl:flex-row items-center justify-between max-w-6xl ml-[35px] pt-4 mx-auto">
+      {/* The left section */}
+      <div className="w-full xl:w-[35%] mb-6 ml-1 -mt-1 xl:mb-0">
         <h2 className="text-4xl font-bold tracking-[-0.007em] text-[#091156] mb-2">Request call services</h2>
         <p className="font-normal tracking-widest mt-5 text-[#8B8B8B]">
           Lorem ipsum dolor sit amet, consect adipiscing elit{' '}
           <a href="#" className="text-[#091156] font-semibold">Contact Us</a>
         </p>
       </div>
-      <div className="w-full md:w-[65%] md:pl-8 mt-[6px]">
-        <div className="relative pl-12">
+      
+      {/* The right section */}
+      <div className="w-full xl:w-[65%] xl:pl-8 mt-[6px]">
+        <div className="relative xl:pl-12">
           <input
             type="tel"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="Insert your phone number here ..."
-            className="w-[658px] h-[73px] pl-9 pr-32 py-3 border border-[#D9DDFE] rounded-[25px] focus:outline-none focus:ring-2 focus:ring-[#FF64AE] text-base tracking-widest placeholder:text-base placeholder:text-[#C5C5C5] placeholder:tracking-widest"
+            className="w-full xl:w-[658px] h-[73px] xl:pl-9 xl:pr-32 py-3 border border-[#D9DDFE] rounded-[25px] focus:outline-none focus:ring-2 focus:ring-[#FF64AE] text-base tracking-widest placeholder:text-base placeholder:text-[#C5C5C5] placeholder:tracking-widest"
           />
           <button
             type="submit"
             onClick={handleSubmit}
             className="absolute mr-[9px] right-0 top-0 bottom-0 w-[113px] bg-[#FF64AE] text-white rounded-r-[25px] hover:bg-[#FF64AE] focus:outline-none focus:ring-2 focus:ring-[#FF64AE] focus:ring-offset-2 flex items-center justify-center"
           >
-            <div className="mr-2">
+            <div className="xl:mr-2">
               <PhoneIcon />
             </div>
           </button>

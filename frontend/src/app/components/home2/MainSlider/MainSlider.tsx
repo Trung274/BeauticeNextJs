@@ -9,10 +9,10 @@ import PlayButtonSVG from '@/public/assets/PlayButton.svg'
 const MainSlider: React.FC = () => (
   <div className="flex flex-col justify-center pt-4">
     {/* Content */}
-    <div className="flex flex-row pt-[90px] max-md:flex-col">
+    <div className="grid grid-cols-1 md:grid-cols-2 pt-[90px]">
       {/* Left Content */}
-      <div className="w-full md:w-1/2 ml-[38px] text-white mb-8 md:mb-0">
-      <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
+      <div className="ml-[38px] text-white mb-8 md:mb-0">
+        <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
           <span className="block">Your beauty center</span>
           <span className="block mt-[12px]">place</span>
         </div>
@@ -22,12 +22,12 @@ const MainSlider: React.FC = () => (
           magna consequat neque vitae lobortis. <br />
         </p>
         <div className='flex mt-10'>
-        <WhiteButton href='#'>More Details</WhiteButton>
+          <WhiteButton href='#'>More Details</WhiteButton>
         </div>
       </div>
 
       {/* Right Content - Tour Video */}
-      <div className="w-full md:w-1/2 flex justify-center items-center -ml-[64px] -mt-[10px]">
+      <div className="w-full flex justify-center items-center -ml-[27px] -mt-[10px]">
         <a href="#" className="group w-[58%] md:w-[48%] aspect-square relative">
           <Image
             src={PlayButtonSVG}

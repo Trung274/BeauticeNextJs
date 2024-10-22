@@ -13,7 +13,7 @@ const MainServices: React.FC = () => (
         Lorem ipsum dolor sit amet.
       </div>
     </div>
-    <div className="flex flex-wrap justify-center mt-[22px] gap-x-[66px] p-8">
+    <div className="grid grid-cols-1 xl:flex xl:flex-wrap justify-center mt-[22px] gap-8 xl:gap-x-[66px] p-8">
       {SERVICES2.map((service, index) => (
         <ServiceCard
           key={index}

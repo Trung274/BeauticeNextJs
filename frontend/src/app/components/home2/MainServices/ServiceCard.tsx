@@ -9,7 +9,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => (
-  <div className="bg-white rounded-[25px] p-6 flex flex-col items-start text-start w-[261px] h-[303px] border border-[#E2E2E2] hover:border-[#9BA2E0] active:border-[#9BA2E0] transition-colors duration-200">
+  <div className="bg-white rounded-[25px] p-6 flex flex-col items-start text-start w-full xl:w-[261px] h-[303px] border border-[#E2E2E2] hover:border-[#9BA2E0] active:border-[#9BA2E0] transition-colors duration-200">
     <div className="mb-4 ml-3 mt-[6px]">
       <Image src={icon} alt={title} width={64} height={64} />
     </div>

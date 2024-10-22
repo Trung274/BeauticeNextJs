@@ -37,7 +37,7 @@ export default function Home2() {
         <section className="w-full max-w-7xl mx-auto py-16">
           <TheBlog />
         </section>
-        <section className="w-full max-w-7xl mx-auto py-16 pb-[177px]">
+        <section className="w-full max-w-7xl mx-auto py-16 pb-[167px]">
           <Request />
         </section>
       </main >
