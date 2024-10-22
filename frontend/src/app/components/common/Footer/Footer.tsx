@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
     </div>
 
     <div className="relative z-10 py-16 w-full">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-6xl mx-auto px-24 sm:px-20 md:px-36 lg:px-8 w-full">
         <div className="flex flex-col lg:flex-row justify-between gap-8 mb-36 mt-[174px] w-full">
           {/* Logo + Address info */}
           <div className="flex flex-col gap-4 pt-1 w-full lg:max-w-[50%] -ml-[1.6rem]">

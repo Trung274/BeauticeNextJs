@@ -5,9 +5,9 @@ import PinkButton from '../../common/Buttons/PinkButton'
 import Link from 'next/link'
 
 const AboutUs = () => (
-  <div className="grid grid-cols-1 lg:ml-44 xl:ml-0 xl:grid-cols-12 gap-8 w-full">
+  <div className="grid grid-cols-1 xl:ml-0 xl:grid-cols-12 gap-8 w-full">
     <div className="xl:col-span-7 flex flex-col mt-16 gap-y-3">
-      <div className="flex flex-col xl:ml-6 gap-y-3">
+      <div className="flex flex-col lg:ml-44 xl:ml-6 gap-y-3">
         <div className="text-base mt-3 font-semibold text-[#FF64AE]">About Us</div>
         <div className="text-4xl text-[#091156] font-semibold">We are the best beauty clinic</div>
         <div className="text-base mt-[10px] xl:-ml-[2px] tracking-wider-plus font-medium text-[#8B8B8B] w-full xl:w-[76%]">
@@ -22,7 +22,7 @@ const AboutUs = () => (
         </div>
       </div>
 
-      <div className="flex flex-row max-xl:flex-col ml-[22px] mt-10">
+      <div className="flex flex-row ml-[22px] lg:ml-44 xl:ml-[22px] max-xl:flex-col mt-10">
         <div className=''>
           <a href="/learn-more" className='px-10 py-2.5 border-2 border-[#ff64ae] bg-[#ff64ae] text-white font-semibold text-base tracking-widest rounded-full h-[60px] w-[200px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff64ae]'>Learn More</a>
         </div>
@@ -47,7 +47,7 @@ const AboutUs = () => (
       </div>
     </div>
 
-    <div className="xl:col-span-5 mt-[45px] xl:mr-8 xl:-ml-24 flex justify-center xl:justify-end">
+    <div className="xl:col-span-5 lg:ml-44 mt-[45px] xl:mr-8 xl:-ml-24 flex justify-center xl:justify-end">
       <div className="w-full h-full transform origin-center scale-50 sm:scale-100 md:scale-100 lg:scale-110 xl:scale-100 -translate-x-15 xl:translate-x-0">
         <ThumbnailAboutUsSVG />
       </div>

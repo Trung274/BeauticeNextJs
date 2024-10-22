@@ -18,7 +18,7 @@ const MainSlider: React.FC = () => (
         </div>
       </div>
       <div className='w-full xl:w-1/2 flex justify-items-center justify-center xl:justify-end items-center pt-8 xl:-ml-9 xl:pt-2'> 
-        <div className="w-full md:w-full h-full transform origin-center scale-50 md:scale-100 max-xl:flex max-xl:justify-center">
+        <div className="w-full md:w-full h-full transform origin-center scale-75 md:scale-100 max-xl:flex max-xl:justify-center">
           <AnimationSlider />
         </div>
       </div>
