@@ -1,9 +1,9 @@
-import ThumbnailAboutUsSVG from '@/public/assets/ThumbnailAboutUs3'
-import PlayButtonSVG from '@/public/assets/PlayButton4.svg';
 import Image from 'next/image';
+import thumbnailImage from '@/public/assets/ThumbnailAboutUs3.svg';
+import playButtonImage from '@/public/assets/PlayButton4.svg';
 
 const About = () => (
-    <div className="flex flex-col gap-y-10 mx-auto justify-center max-w-[1400px] w-full px-4">
+    <div className="flex flex-col gap-y-6 mx-auto justify-center max-w-[1400px] w-full px-4">
         <div className="flex flex-col gap-y-3 ml-[22px] mt-9">
             <div className="text-base font-semibold text-[#FF64AE]">About</div>
             <div className="text-4xl font-semibold">
@@ -15,12 +15,24 @@ const About = () => (
                 <br /> purus sit amet luctus venenatis
             </div>
         </div>
-        <div className="relative -ml-[53px] -mt-6 w-full aspect-[1290/690]">
-            <ThumbnailAboutUsSVG 
-                className="w-[1290px] h-full" 
-            />
-            <div className="absolute top-1/2 left-1/2 ml-[53px] -mt-5 transform -translate-x-1/2 -translate-y-1/2">
-                <Image src={PlayButtonSVG} alt="Play Button" width={173} height={173} />
+        <div className="relative w-[103.5%] mx-auto rounded-3xl overflow-hidden xl:-ml-5 -mt-2">
+        <div className="aspect-video relative w-full">
+                <Image
+                    src={thumbnailImage}
+                    alt="About Us Video Thumbnail"
+                    fill
+                    className="object-cover rounded-3xl"
+                    priority
+                />
+            </div>
+            <div className="absolute inset-0 flex items-center xl:mb-10 justify-center">
+                <Image
+                    src={playButtonImage}
+                    alt="Play Button"
+                    width={170}
+                    height={170}
+                    className="cursor-pointer hover:scale-110 transition-transform duration-200"
+                />
             </div>
         </div>
     </div>

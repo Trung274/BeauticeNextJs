@@ -35,7 +35,7 @@ export default function about() {
                 <section className="w-full max-w-7xl mx-auto py-16">
                     <Mission />
                 </section>
-                <section className="w-full max-w-7xl mx-auto py-16 -mt-20 mb-9">
+                <section className="w-full max-w-7xl mx-auto py-16 -mt-28 mb-9">
                     <Clients />
                 </section>
             </main>
