@@ -1,36 +1,48 @@
 import Image from 'next/image'
 import ThumbnailService from '@/public/assets/Animation1.svg'
-import ArrowIcon from '@/public/assets/angle-double-right.svg' 
+import ArrowIcon from '@/public/assets/angle-double-right.svg'
 
 const ServiceConsultation = () => (
-    <div className="flex flex-wrap w-full justify-between items-start">
-        <div className="w-full md:w-[45%] mt-6 md:mt-0">
-        <div className="max-w-sm mx-auto md:max-w-none">
-                <Image
-                    src={ThumbnailService}
-                    alt=""
-                    width={490}
-                    height={302.67}
-                    layout="responsive"
-                />
-            </div>
-        </div>
-        <div className="flex flex-col gap-y-5 w-full md:w-[45%]">
-        <div className="flex flex-col gap-y-5">
-                <div className="text-xs font-semibold text-[#FF64AE]">Beauty Consultation</div>
-                <div className="text-3xl text-[#091156] font-semibold">We services beauty
-                <br /> consultation</div>
-                <div className="text-base font-light text-[#8B8B8B] w-[71%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.
-                </div>
-                <div className="flex items-center">
-                    <span className="text-base text-[#091156] font-semibold mr-2">Make an appointment</span>
+    <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col lg:flex-row gap-8 xl:gap-x-44 w-full">
+            {/* Image Section */}
+            <div className="w-full lg:w-1/2">
+                <div className="relative max-w-sm mx-auto lg:max-w-none lg:w-[96%] xl:-mt-4">
                     <Image
-                        src={ArrowIcon}
-                        alt="Arrow"
-                        width={20}
-                        height={20}
+                        src={ThumbnailService}
+                        alt="Beauty Consultation Service"
+                        width={450} 
+                        height={278} 
+                        className="w-full"
                     />
+                </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="w-full lg:w-1/2">
+                <div className="flex flex-col gap-y-5 text-center lg:text-left">
+                    <div className="text-base font-semibold xl:ml-[5px] xl:mt-[10px] text-[#FF64AE]">
+                        Beauty Consultation
+                    </div>
+                    <div className="xl:text-4xl ml-1 -mt-2 sm:text-3xl text-[#091156] font-semibold">
+                    <span className="block">We services beauty</span>
+                    <span className="block xl:mt-[5px]">consultation</span>
+                    </div>
+                    <div className="text-base tracking-widest font-light text-[#8B8B8B] max-w-xl lg:w-[99%] mx-auto lg:mx-0 xl:ml-1 xl:-mt-1 ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit, quam suscipit purus donec amet. Egestas volutpat facilisi eu libero.
+                    </div>
+                    <div className="flex items-center justify-center lg:justify-start">
+                        <span className="text-base tracking-widest text-[#091156] font-semibold ml-[5px] mt-1">
+                            Make an Appointment
+                        </span>
+                        <Image
+                            src={ArrowIcon}
+                            alt="Arrow"
+                            width={25}
+                            height={25}
+                            className='ml-3 mt-[3px]'
+                        />
+                    </div>
                 </div>
             </div>
         </div>

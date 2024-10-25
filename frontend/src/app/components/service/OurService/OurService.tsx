@@ -14,16 +14,16 @@ const OurService: React.FC = () => (
       <div className='text-base tracking-widest mt-4 font-light text-[#8B8B8B]'>Lorem ipsum dolor sit amet</div>
     </div>
     {/* Images */}
-    <div className="flex flex-col mt-4 gap-32">
-      <div className="flex flex-wrap gap-32 justify-center">
+    <div className="flex flex-col mt-10 gap-32">
+      <div className="flex flex-wrap gap-20 justify-center">
         <div className="hidden md:block">
-          <Image src={ServiceImg1} alt="SquareImg1" width={300} height={300} />
+          <Image src={ServiceImg1} alt="SquareImg1" width={292} height={292} />
         </div>
         <Image src={ServiceImg2} alt="LongImg1" width={725} height={410} />
       </div>
-      <div className="flex flex-wrap gap-32 justify-center">
-        <Image src={ServiceImg3} alt="LongImg2" width={600} height={300} />
-        <Image src={ServiceImg4} alt="SquareImg2" width={300} height={300} />
+      <div className="flex flex-wrap xl:-mt-15 xl:ml-[9px] gap-[80px] justify-center">
+        <Image src={ServiceImg3} alt="LongImg2" width={720} height={296} />
+        <Image src={ServiceImg4} alt="SquareImg2" width={290} height={290} />
       </div>
     </div>
   </div>

@@ -104,7 +104,10 @@ export const TAGS = ['beauty', 'cute', 'skin', 'glow', 'style', 'clinic', 'style
 export const FAQData = [
   {
     question: "Is beauty consultation handled thoroughly?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla"
+    answer: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna",
+      "porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla"
+    ]
   },
   {
     question: "Can I be beautiful in an instant time?",
