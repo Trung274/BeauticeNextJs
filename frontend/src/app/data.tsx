@@ -23,6 +23,9 @@ import BeautyProductIcon from '@/public/assets/pro2.svg'
 import pic1 from '@/public/assets/pic1.svg'
 import pic2 from '@/public/assets/pic2.svg'
 import pic3 from '@/public/assets/pic3.svg'
+import ImgLinaGustav from '@/public/assets/LinaGustav.svg'
+import ImgAdamWhite from '@/public/assets/AdamWhite.svg'
+import ImgJaneDoe from '@/public/assets/JaneDoe.svg'
 
 
 export const BLOG_ARTICLES = [
@@ -199,4 +202,25 @@ export const ARTICLES = [
     title: 'About skin care you need to know',
     description: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings ...',
   },
+];
+
+export const ASSISTANT_TEAM = [
+  {
+    image: ImgLinaGustav,
+    name: "Lina Gustav",
+    role: "Pharmacist",
+    description: "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Nam id magnis at placerat\npulvinar euismod neque."
+  },
+  {
+    image: ImgAdamWhite,
+    name: "Adam White",
+    role: "Finance",
+    description: "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Nam id magnis at placerat\npulvinar euismod neque."
+  },
+  {
+    image: ImgJaneDoe,
+    name: "Jane Doe",
+    role: "Marketer",
+    description: "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Nam id magnis at placerat\npulvinar euismod neque."
+  }
 ];
