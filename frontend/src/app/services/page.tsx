@@ -13,7 +13,7 @@ export default function service() {
         <>
         {/* Background SVGs */}
         < div className="absolute top-0 left-0 right-0 -z-10" >
-            <img src={Bubble.src} alt="" className="w-auto h-auto absolute top-[200px] right-0" />
+            <img src={Bubble.src} alt="" className="w-auto h-auto absolute top-[200px]" />
         </div >
         <main className="flex flex-col">
             <section className="w-full mx-auto px-4 py-16">

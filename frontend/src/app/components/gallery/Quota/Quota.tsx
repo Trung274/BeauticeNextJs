@@ -1,24 +1,30 @@
 import Image from 'next/image'
 import ThumbnailAboutUs2SVG from '@/public/assets/ThumbnailAboutUs2.svg'
-import PinkButton from '../../common/Buttons/PinkButton'
+import PinkButton1 from '../../common/Buttons/PinkButton1'
 
 const Quota = () => (
-    <div className="flex flex-wrap w-full justify-between items-start">
-        <div className="w-full md:w-[45%] mt-6 md:mt-0">
-            <div className="flex flex-col gap-y-5">
-                <div className="text-xs font-semibold text-[#FF64AE]">Get The Quota</div>
-                <div className="text-3xl text-[#091156] font-semibold">Want to be handled by our
-                    <br /> professional team immediately?</div>
-                <div className="text-base font-light text-[#8B8B8B] w-[71%]">
-                Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.
+    <div className="container mx-auto px-4 sm:px-6 lg:px-5">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-12 py-8 md:py-12">
+            {/* Left Content */}
+            <div className="w-full md:w-[55%] space-y-4 md:space-y-6 xl:max-w-7xl">
+                <div className="text-sm md:text-base font-semibold text-[#FF64AE] tracking-normal xl:mt-[7px] xl:ml-1 xl:-mb-3">
+                    Get The Quota
                 </div>
-            </div>
-        </div>
-        <div className="flex flex-col items-center pt-16 gap-y-5 w-full md:w-[45%]">
-            <div className="flex flex-row max-md:flex-col">
-                <PinkButton href="#">Make an Appointment</PinkButton>
+                <div className="text-2xl sm:text-3xl md:text-4xl text-[#091156] font-semibold leading-tight">
+                <span className="block">Want to be handled by our </span>
+                <span className="block mt-[6px]">professional team immediately</span>
+                </div>
+                <p className="text-sm tracking-widest sm:text-base xl:ml-[2px] text-[#8B8B8B] font-light leading-relaxed max-w-xl">
+                    Id dui erat sed quam tellus in purus. Pellentesque congue fringilla cras tellus enim.
+                </p>
             </div>
 
+            {/* Right Content */}
+            <div className="w-full md:w-[45%] flex justify-center md:justify-end items-center">
+                <div className="w-full sm:w-auto xl:mr-[59px] xl:mt-[10px]">
+                <a href="/learn-more" className='px-10 py-2.5 border-2 border-[#ff64ae] bg-[#ff64ae] text-white font-semibold text-base tracking-widest rounded-full h-[58px] w-[316px] inline-flex items-center justify-center whitespace-nowrap transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff64ae]'>Make an Appointment</a>
+                </div>
+            </div>
         </div>
     </div>
 )
