@@ -130,7 +130,7 @@ export const CONTACT_INFO = [
   {
     icon: Location,
     title: 'Address',
-    value: '101 Baker Street, New York',
+    value: '101 Baker Street, NY',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit',
   },
   {

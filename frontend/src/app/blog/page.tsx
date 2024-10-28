@@ -9,7 +9,7 @@ import Tags from "../components/blog/Tags/Tags";
 export default function blog() {
     return (
         <main className="flex flex-col">
-            <section className="w-full mx-auto px-4 py-16">
+            <section className="w-full mx-auto px-4 py-[3px]">
                 <Title />
             </section>
             <section className="w-full mx-auto px-4 pt-16">
