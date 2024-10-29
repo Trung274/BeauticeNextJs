@@ -8,25 +8,26 @@ import Tags from "../components/blog/Tags/Tags";
 
 export default function blog() {
     return (
-        <main className="flex flex-col">
+        <main className="flex flex-col mb-[111px]">
             <section className="w-full mx-auto px-4 py-[3px]">
                 <Title />
             </section>
             <section className="w-full mx-auto px-4 pt-16">
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
+                <section className="flex flex-col xl:grid xl:grid-cols-3 gap-4">
                     {/* 1st column */}
-                    <div className="col-span-1 md:col-span-2 p-4">
+                    <div className="xl:col-span-2 p-4 order-2 xl:order-1">
                         <Article />
                     </div>
 
                     {/* 2nd column */}
-                    <div className="col-span-1 p-4">
-                        <Search />
-                        <Post />
-                        <Categories />
-                        <Tags />
-                        <Connect />
+                    <div className="p-3 order-1 xl:order-2 flex flex-col items-center xl:items-start">
+                        <div className="w-full max-w-md xl:max-w-none">
+                            <Search />
+                            <Post />
+                            <Categories />
+                            <Tags />
+                            {/* <Connect /> */}
+                        </div>
                     </div>
                 </section>
             </section>

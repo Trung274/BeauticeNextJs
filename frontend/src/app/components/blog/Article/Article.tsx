@@ -19,25 +19,37 @@ const Article: React.FC = () => {
   const paginate = (pageNumber: number) => dispatch(setCurrentPage(pageNumber));
 
   return (
-    <div className="flex flex-col space-y-8 h-full">
+    <div className="flex flex-col space-y-[127px] mt-6 xl:ml-[5px] h-full">
       {currentArticles.map((article, index) => (
         <div key={index} className="h-full">
           <BlogArticle article={article} />
         </div>
       ))}
-      <div className="flex justify-end space-x-2 mr-16 mt-4">
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
-          <button
-            key={number}
-            onClick={() => paginate(number)}
-            className={`px-3 py-1 rounded ${
-              currentPage === number ? 'bg-[#172176] text-white rounded-full' : 'rounded-full'
-            }`}
-          >
-            {number}
-          </button>
-        ))}
+      <div className="flex justify-end space-x-5 mr-[152px]">
+        <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
       </div>
+    </div>
+  );
+};
+
+const Pagination: React.FC<{ currentPage: number; totalPages: number; paginate: (pageNumber: number) => void }> = ({
+  currentPage,
+  totalPages,
+  paginate,
+}) => {
+  return (
+    <div className="flex space-x-5 -mt-8">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+        <button
+          key={number}
+          onClick={() => paginate(number)}
+          className={`px-3 py-1 rounded ${
+            currentPage === number ? 'bg-[#172176] text-white rounded-full' : 'rounded-full'
+          }`}
+        >
+          {number}
+        </button>
+      ))}
     </div>
   );
 };

@@ -7,9 +7,9 @@ import { SOCIAL_LINKS } from '@/app/data';
 
 const Connect = () => {
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-md">
-      <h2 className="text-xl font-bold text-[#091156] mb-4">Social Connect</h2>
-      <div className="flex space-x-4">
+    <div className="bg-white p-6 rounded-[25px] shadow-md max-w-[350px] xl:mt-24">
+      <div className="text-base xl:ml-6 xl:mt-5 font-bold text-[#091156]">Social Connect</div>
+      <div className="flex space-x-4 mb-11">
         {SOCIAL_LINKS.map((social) => (
   <Link
     key={social.name}
