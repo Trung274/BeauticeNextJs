@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import ThumbnailAboutUs2SVG from '@/public/assets/ThumbnailAboutUs2.svg'
-import PinkButton from '../../../../components/common/Buttons/PinkButton'
+import PinkButton from '@/components/common/Buttons/PinkButton'
 
 const AboutUs = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-8">
