@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import PinkButton from '../../../../components/common/Buttons/PinkButton';
+import PinkButton from '@/components/common/Buttons/PinkButton';
 
 interface IFormInputs {
   firstName: string;
