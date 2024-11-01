@@ -1,6 +1,6 @@
-import Contact from "../components/contact/Form/Contact";
-import Map from "../components/contact/Map/Map";
-import Info from "../components/contact/Info/Info";
+import Contact from "@/components/contact/Form/Contact";
+import Map from "../../components/contact/Map/Map";
+import Info from "../../components/contact/Info/Info";
 
 // Import SVGs
 import Bubble from '../../public/assets/ContactBubble.svg';

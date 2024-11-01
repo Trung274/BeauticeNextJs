@@ -1,6 +1,6 @@
-import OurGallery from "../components/gallery/OurGallery/OurGallery";
-import VideoTour from "../components/gallery/VideoTour/VideoTour";
-import Quota from "../components/gallery/Quota/Quota";
+import OurGallery from "../../components/gallery/OurGallery/OurGallery";
+import VideoTour from "../../components/gallery/VideoTour/VideoTour";
+import Quota from "@/components/gallery/Quota/Quota";
 
 // Import SVGs
 import Bubble from '../../public/assets/Backgroundbubble4.svg';
@@ -9,7 +9,7 @@ export default function service() {
     return (
         <>
         {/* Background SVGs */}
-        < div className="absolute top-0 left-0 right-0 -z-10" >
+        < div className="absolute top-0 left-0 right-0 -z-10 hidden xl:block" >
             <img src={Bubble.src} alt="" className="w-auto h-auto absolute top-[2039px] right-0" />
         </div >
         <main className="flex flex-col">

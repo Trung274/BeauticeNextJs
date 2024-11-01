@@ -6,7 +6,6 @@ const test = (req, res) => {
     res.json('test is working')
 }
 
-// Register Endpoint
 const registerUser = async (req, res) => {
     try {
         const {name, email, password} = req.body;
@@ -44,34 +43,38 @@ const registerUser = async (req, res) => {
     }
 }
 
-// Login Endpoint
 const loginUser = async (req, res) => {
     try {
         const {email, password} = req.body;
 
-      //Check if user exists
-      const user = await User.findOne({email});
-      if (!user) {
-        return res.json({
-            error: 'No user found'
-        })
-      }
+        //Check if user exists
+        const user = await User.findOne({email});
+        if (!user) {
+            return res.status(401).json({
+                error: 'No user found'
+            });
+        }
 
-      //Check if passwords match
-      const match = await comparePassword(password, user.password )
-      if(match) {
+        //Check if passwords match
+        const match = await comparePassword(password, user.password)
+        if(!match) {
+            return res.status(401).json({
+                error: "Password does not match"
+            });
+        }
+
+        // If we get here, login is successful
         jwt.sign({email: user.email, id: user._id, name:user.name}, process.env.JWT_SECRET, {}, (err, token) => {
             if(err) throw err;
-            res.cookie('token', token).json(user)
-        })
-      }
-      if(!match) {
-        res.json({
-            error: "password do not match"
-        })
-      }
+            res.cookie('token', token).json({
+                success: true,
+                user
+            });
+        });
+        
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ error: "An error occurred during login" });
     }
 }
 
@@ -100,7 +103,6 @@ const getProfile = async (req, res) => {
     });
 };
 
-// Logout Endpoint
 const logoutUser = (req, res) => {
     res.clearCookie('token');
     return res.json({ message: 'Logged out successfully' });

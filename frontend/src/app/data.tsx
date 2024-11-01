@@ -26,6 +26,10 @@ import pic3 from '@/public/assets/pic3.svg'
 import ImgLinaGustav from '@/public/assets/LinaGustav.svg'
 import ImgAdamWhite from '@/public/assets/AdamWhite.svg'
 import ImgJaneDoe from '@/public/assets/JaneDoe.svg'
+import Customer1 from '@/public/assets/customer1.svg'
+import Customer2 from '@/public/assets/customer2.svg'
+import Customer3 from '@/public/assets/customer3.svg'
+import Customer4 from '@/public/assets/customer2.svg'
 
 
 export const BLOG_ARTICLES = [
@@ -222,5 +226,36 @@ export const ASSISTANT_TEAM = [
     name: "Jane Doe",
     role: "Marketer",
     description: "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Nam id magnis at placerat\npulvinar euismod neque."
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Sarah Parker",
+    avatar: Customer1,
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus\nmetus tincidunt laoreet ultricies condimentum ac integer\naliquam. Lorem diam dignissim amet fermentum elementum dui\ndui. Aliquam sem elementum morbi imperdiet suscipit erat ut.\nPurus volutpat in turpis gravida blandit.",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    avatar: Customer2,
+    comment: "The attention to detail is outstanding. The product exceeded my\nexpectations in terms of quality and durability. Customer\nservice was extremely responsive when I had questions about\nthe features. Definitely worth the investment and I'll be\nrecommending it to my colleagues.",
+    rating: 4
+  },
+  {
+    id: 3,
+    name: "Emily Rodriguez",
+    avatar: Customer3,
+    comment: "What impressed me most was how intuitive everything is. I was\ninitially worried about the learning curve, but the onboarding\nprocess was smooth and well-documented. Within days, I was\nusing all the advanced features like a pro. Great work on\nmaking complex functionality accessible!",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "James Wilson",
+    avatar: Customer4,
+    comment: "Been using this for my small business for six months now and\nit's made a huge difference in our productivity. The recent\nupdates have added some great features while maintaining the\nsimple interface we love. Minor glitches here and there, but\nsupport team is always quick to respond.",
+    rating: 4
   }
 ];

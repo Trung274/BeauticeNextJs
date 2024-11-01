@@ -1,10 +1,10 @@
-import Title from "../components/blog/Title/Title";
-import Article from "../components/blog/Article/Article";
-import Search from "../components/blog/Search/Search";
-import Post from "../components/blog/Post/Post";
-import Categories from "../components/blog/Categories/Categories";
-import Connect from "../components/blog/Connect/Connect";
-import Tags from "../components/blog/Tags/Tags";
+import Title from "@/components/blog/Title/Title";
+import Article from "@/components/blog/Article/Article";
+import Search from "@/components/blog/Search/Search";
+import Post from "@/components/blog/Post/Post";
+import Categories from "@/components/blog/Categories/Categories";
+import Connect from "@/components/blog/Connect/Connect";
+import Tags from "@/components/blog/Tags/Tags";
 
 export default function blog() {
     return (
@@ -21,12 +21,16 @@ export default function blog() {
 
                     {/* 2nd column */}
                     <div className="p-3 order-1 xl:order-2 flex flex-col items-center xl:items-start">
-                        <div className="w-full max-w-md xl:max-w-none">
-                            <Search />
-                            <Post />
-                            <Categories />
-                            <Tags />
-                            {/* <Connect /> */}
+                        <div className="w-full md:max-w-5xl max-w-md xl:max-w-none">
+                            <div className="md:float-left md:w-1/2 xl:float-none xl:w-full">
+                                <Search />
+                                <Post />
+                            </div>
+                            <div className="md:float-right md:w-1/2 xl:float-none xl:w-full">
+                                <Categories />
+                                <Tags />
+                                {/* <Connect /> */}
+                            </div>
                         </div>
                     </div>
                 </section>

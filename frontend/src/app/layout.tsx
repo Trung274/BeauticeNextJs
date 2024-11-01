@@ -3,11 +3,11 @@
 import { usePathname } from 'next/navigation';
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import Header1 from "./components/common/Header/Header1";
-import Header2 from "./components/common/Header/Header2";
-import Footer from "./components/common/Footer/Footer";
-import ScrollTop from "./components/common/ScrollTop";
-import BgSlider from "./components/home2/MainSlider/BgSlider";
+import Header1 from '@/components/common/Header/Header1';
+import Header2 from '@/components/common/Header/Header2';
+import Footer from "@/components/common/Footer/Footer";
+import ScrollTop from '@/components/common/ScrollTop';
+import BgSlider from "@/components/home2/MainSlider/BgSlider";
 import { Providers } from './Providers';
 
 const poppins = Poppins({
@@ -40,7 +40,7 @@ export default function RootLayout({
                 <Header2 />
                 {/* Adjusted padding for different screen sizes */}
                 <main className="flex-grow w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto 
-                  md:max-w-[720px] lg:max-w-[960px] xl:max-w-7xl">
+                  md:max-w-[820px] lg:max-w-[960px] xl:max-w-7xl">
                   {children}
                 </main>
                 {/* Adjusted footer margin for different screen sizes */}
@@ -52,7 +52,7 @@ export default function RootLayout({
               <Header1 />
               {/* Adjusted padding and max-width for different screen sizes */}
               <main className="flex-grow w-full px-4 sm:px-6 lg:px-8 
-                max-w-7xl mx-auto md:max-w-[720px] lg:max-w-[960px] xl:max-w-7xl">
+                max-w-7xl mx-auto md:max-w-[820px] lg:max-w-[1140px] xl:max-w-7xl">
                 {children}
               </main>
               {/* Adjusted footer margin for different screen sizes */}

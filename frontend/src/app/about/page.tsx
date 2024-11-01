@@ -1,9 +1,9 @@
-import About from "../components/about/About";
-import ProfessionalTeams from "../components/home1/ProfessionalTeams/ProfessionalTeams";
-import Vision from "../components/about/Vision";
-import Mission from "../components/about/Mission";
-import Clients from "../components/about/Clients";
-import Slogan from "../components/about/Slogan";
+import About from "../../components/about/About";
+import ProfessionalTeams from "../../components/home1/ProfessionalTeams/ProfessionalTeams";
+import Vision from "../../components/about/Vision";
+import Mission from "../../components/about/Mission";
+import Clients from "../../components/about/Clients";
+import Slogan from "../../components/about/Slogan";
 
 // Import SVGs
 import Bubble1 from '../../public/assets/Bubble1.svg';

@@ -1,5 +1,9 @@
-import ProfilePage from "../components/profile/ProfilePage";
+import ProfilePage from "@/components/profile/ProfilePage";
 
 export default function Profile() {
-  return <ProfilePage />;
+  return (
+    <div className="py-44">
+      <ProfilePage />
+    </div>
+  );
 }

@@ -1,8 +1,8 @@
-import Signup from "@/app/components/auth/SignUp";
+import Signup from "@/components/auth/SignUp";
 
 export default function AuthPage() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-32">
       <Signup />
     </div>
   );

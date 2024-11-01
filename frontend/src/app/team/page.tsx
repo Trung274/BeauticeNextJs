@@ -1,11 +1,11 @@
-import OurTeams from "../components/team/OurTeams/ProfessionalTeams";
-import AssistanceTeam from "../components/team/AssistantTeam/AssistantTeam";
-import TeamSlogan from "../components/team/TeamSlogan/TeamSlogan";
-import Testimonials from "../components/team/Testimonials/Testimonials";
+import OurTeams from "@/components/team/OurTeams/ProfessionalTeams";
+import AssistanceTeam from "@/components/team/AssistantTeam/AssistantTeam";
+import TeamSlogan from "@/components/team/TeamSlogan/TeamSlogan";
+import Testimonials from "@/components/team/Testimonials/Testimonials";
 
 // Import SVGs
-import Bubble from '../../public/assets/Bubblebg5.svg';
-import ElementBackground from '../../public/assets/ElementBackground.svg'
+import Bubble from '@/public/assets/Bubblebg5.svg';
+import ElementBackground from '@/public/assets/ElementBackground.svg'
 
 export default function team() {
     return (

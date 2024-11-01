@@ -1,9 +1,9 @@
-import MainSlider from "../components/home2/MainSlider/MainSlider";
-import MainServices from "../components/home2/MainServices/MainServices";
-import AboutUs from "../components/home2/AboutUs/AboutUs";
-import Why from "../components/home2/Why/Why";
-import TheBlog from "../components/home2/TheBlog/TheBlog";
-import Request from "../components/home2/Request/Request";
+import MainSlider from "@/components/home2/MainSlider/MainSlider";
+import MainServices from "../../components/home2/MainServices/MainServices";
+import AboutUs from "@/components/home2/AboutUs/AboutUs";
+import Why from "@/components/home2/Why/Why";
+import TheBlog from "@/components/home2/TheBlog/TheBlog";
+import Request from "@/components/home2/Request/Request";
 
 // Import SVGs
 import WaveLine0 from '../../public/assets/WaveLine0.svg';
@@ -34,7 +34,7 @@ export default function Home2() {
         <section className="w-full max-w-7xl mx-auto py-16">
           <Why />
         </section>
-        <section className="w-full max-w-7xl mx-auto py-16">
+        <section className="w-full max-w-7xl mx-auto pt-[62px] pb-24">
           <TheBlog />
         </section>
         <section className="w-full max-w-7xl mx-auto py-16 pb-[167px]">

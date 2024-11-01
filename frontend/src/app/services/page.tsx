@@ -1,9 +1,9 @@
-    import OurService from "../components/service/OurService/OurService";
-import ServiceConsultation from "../components/service/ServiceConsultation/ServiceConsultation";
-import ServiceTreatment from "../components/service/ServiceTreatment/ServiceTreatment";
-import ServiceProducts from "../components/service/ServiceProducts/ServiceProducts";
-import ServiceSlogan from "../components/service/ServiceSlogan/ServiceSlogan";
-import FAQ from "../components/service/ServiceFAQ/ServiceFAQ";
+import OurService from "../../components/service/OurService/OurService";
+import ServiceConsultation from "../../components/service/ServiceConsultation/ServiceConsultation";
+import ServiceTreatment from "../../components/service/ServiceTreatment/ServiceTreatment";
+import ServiceProducts from "../../components/service/ServiceProducts/ServiceProducts";
+import ServiceSlogan from "../../components/service/ServiceSlogan/ServiceSlogan";
+import FAQ from "@/components/service/ServiceFAQ/ServiceFAQ";
 
 // Import SVGs
 import Bubble from '../../public/assets/Bubblebg.svg';
@@ -31,7 +31,7 @@ export default function service() {
             <section className="w-full mx-auto px-4 py-6">
                 <ServiceSlogan />
             </section>
-            <section className="w-full mx-auto px-4 py-12 xl:pb-[117px]">
+            <section className="w-full mx-auto px-4 py-24 xl:pb-[182px]">
                 <FAQ />
             </section>
         </main>

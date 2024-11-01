@@ -1,8 +1,8 @@
-import MainSlider from "./components/home1/MainSlider/MainSlider";
-import CoreServices from "./components/home1/CoreServices/CoreServices";
-import AboutUs from "./components/home1/AboutUs/AboutUs";
-import ProfessionalTeams from "./components/home1/ProfessionalTeams/ProfessionalTeams";
-import ContactUs from "./components/home1/ContactUs/Contactus";
+import MainSlider from "@/components/home1/MainSlider/MainSlider";
+import CoreServices from "../components/home1/CoreServices/CoreServices";
+import AboutUs from "@/components/home1/AboutUs/AboutUs";
+import ProfessionalTeams from "../components/home1/ProfessionalTeams/ProfessionalTeams";
+import ContactUs from "@/components/home1/ContactUs/Contactus";
 
 // Import SVGs
 import SlideBackground from '../public/assets/SlideBackground.svg';
@@ -37,7 +37,7 @@ export default function home1() {
           <ProfessionalTeams />
         </section>
 
-        <section className="w-full mx-auto px-4 pt-36 pb-1">
+        <section className="w-full mx-auto px-4 pt-36 pb-[1px]">
           <ContactUs />
         </section>
       </main>

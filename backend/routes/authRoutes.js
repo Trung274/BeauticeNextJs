@@ -7,7 +7,7 @@ const {test, logoutUser, registerUser, loginUser, getProfile} = require('../cont
 router.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:3000'
+        origin: process.env.CLIENT_URL
     })
 )
 
