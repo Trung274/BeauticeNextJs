@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import ThumbnailAboutUs2SVG from '@/public/assets/ThumbnailAboutUs2.svg'
-import PinkButton1 from '../../../../components/common/Buttons/PinkButton1'
+import PinkButton1 from '@/components/common/Buttons/PinkButton1'
 
 const Quota = () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-5">
