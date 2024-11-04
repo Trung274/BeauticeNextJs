@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser')
 //database connection
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('Database Connected'))
-.catch(() => console.log('Database not connected', err))
+.catch((err) => console.log('Database not connected:', err))
 
 //middleware
 app.use(express.json());
