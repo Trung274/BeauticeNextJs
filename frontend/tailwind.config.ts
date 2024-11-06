@@ -15,14 +15,14 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-poppins)', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       spacing: {
-        '15': '3.75rem', // This is equivalent to 60px (15 * 4px)
+        '15': '3.75rem',
       },
       letterSpacing: {
         'wider-plus': '0.095rem',
