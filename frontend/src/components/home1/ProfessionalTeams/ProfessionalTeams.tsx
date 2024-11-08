@@ -5,8 +5,6 @@ import ProfessionalCard, { Professional } from './ProfessionalCard';
 import DermatologistSVG from '@/public/assets/DermatologistAvatar.svg';
 import StylistSVG from '@/public/assets/StylelistAvatar.svg';
 import SurgeonSVG from '@/public/assets/SurgeonAvatar.svg';
-import { Section, ResponsiveGrid, SectionTitle, MainHeading, SubHeading } from '@/styles/common.styles';
-import tw from 'twin.macro';
 
 const mockProfessionals: Professional[] = [
   {
@@ -39,15 +37,16 @@ const ProfessionalTeams: React.FC = () => {
   const [isAnyHovered, setIsAnyHovered] = useState(false);
 
   return (
-    <Section css={tw`mt-[68px]`}>
+    <section className="flex flex-col mt-[70px] justify-center space-y-12 text-center font-poppins">
       <div className="flex flex-col mb-16">
-        <SectionTitle css={tw`mt-2 ml-[6px] font-semibold text-sm tracking-widest`}>Professional Teams</SectionTitle>
-        <MainHeading css={tw`mt-3`}>The Professional expert</MainHeading>
-        <SubHeading css={tw`mt-5 max-w-4xl mx-auto`}>
+        <div className="text-sm font-semibold mt-2 tracking-widest text-[#FF64AE]">Professional Teams</div>
+        <h2 className="text-3xl mt-4 sm:text-4xl font-semibold text-[#091156]">The Professional expert</h2>
+        <p className="text-base tracking-widest font-light mt-5 text-[#8B8B8B] max-w-4xl mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
-        </SubHeading>
+        </p>
       </div>
-      <ResponsiveGrid
+      <div 
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 xl:gap-14"
         onMouseEnter={() => setIsAnyHovered(true)}
         onMouseLeave={() => setIsAnyHovered(false)}
       >
@@ -58,8 +57,8 @@ const ProfessionalTeams: React.FC = () => {
             isAnyHovered={isAnyHovered}
           />
         ))}
-      </ResponsiveGrid>
-    </Section>
+      </div>
+    </section>
   );
 };
 
