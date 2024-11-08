@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import NavButton2 from '../Buttons/NavButton2';
-import PinkButton0 from '../Buttons/PinkButton1';
-import MainLogoWhite from '@/public/assets/MainLogoWhite';
+import PinkButton0 from '../Buttons/PinkButton0';
+import Image from 'next/image';
+import MainLogoWhite from '@/public/assets/MainLogoWhite.svg';
 import ToggleButton from '../Buttons/ToggleButton';
 import { useAuth } from '@/app/context/AuthContext';
 import { logoutUser } from '@/app/system/api'
@@ -64,11 +65,17 @@ const Header1 = () => {
   const avatarUrl = user ? `https://api.dicebear.com/6.x/initials/svg?seed=${encodeURIComponent(user.name)}&backgroundColor=FF64AE` : '';
 
   return (
-    <header className="w-full relative pt-5">
+    <header className="w-full relative pt-5 pb-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center space-x-1.5 py-4">
-          <div className="flex-shrink-0 pl-8 pt-1">
-            <MainLogoWhite />
+        <div className="flex-shrink-0 pl-[38px] pt-1">
+            <Image
+              src={MainLogoWhite}
+              alt="Main Logo"
+              width={258}
+              height={63}
+              priority
+            />
           </div>
 
           <nav className="hidden xl:flex items-center pb-1 pr-9">

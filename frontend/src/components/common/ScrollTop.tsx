@@ -31,7 +31,7 @@ const ScrollTop: React.FC<ScrollTopProps> = () => {
     <div className="overflow-hidden">
       <button
         aria-label="Scroll to top"
-        className={`fixed bottom-[183px] ss:bottom-10 z-30 -right-full pr-[25px] transition-all duration-500 shadow-2xl shadow-black hover:opacity-80 active:opacity-70`}
+        className={`fixed bottom-[183px] ss:bottom-10 z-30 -right-full mr-[25px] transition-all duration-500 shadow-2xl shadow-black hover:opacity-80 active:opacity-70`}
         onClick={scrollToTop}
         ref={buttonRef}
       >

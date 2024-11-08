@@ -1,12 +1,19 @@
 import React from 'react'
-import AnimationContactUs from '@/public/assets/AnimationContactUs'
+import Image from 'next/image'
+import AnimationContactUs from '@/public/assets/AnimationContactUs.svg'
 import ContactUsForm from './ContactForm'
 
 const ContactUs: React.FC = () => (
   <div className="flex flex-col mb-28 justify-center">
     <div className="flex flex-wrap flex-row justify-center max-md:flex-col px-4">
-      <div className="flex max-md:w-full xl:-ml-3 mt-[161px] relative xl:right-[6px] max-xl:justify-center">
-        <AnimationContactUs />
+      <div className="flex max-md:w-full xl:-ml-3 mt-[41px] relative xl:right-[6px] max-xl:justify-center">
+        <Image 
+          src={AnimationContactUs} 
+          alt="Contact us illustration"
+          width={519}  
+          height={402}
+          priority
+        />
       </div>
 
       <div className="flex flex-col gap-y-5">

@@ -25,7 +25,7 @@ const Article: React.FC = () => {
           <BlogArticle article={article} />
         </div>
       ))}
-      <div className="flex justify-end space-x-5 mr-[152px]">
+      <div className="flex justify-center xl:justify-end space-x-5 mr-[152px]">
         <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
       </div>
     </div>

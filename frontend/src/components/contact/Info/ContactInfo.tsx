@@ -38,7 +38,9 @@ const ContactCard: React.FC<ContactCardProps> = ({ info }) => (
 const ContactInfo: React.FC = () => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {CONTACT_INFO.map((info, index) => (
-      <ContactCard key={index} info={info} />
+      <div key={index} className="md:last:col-span-2 md:last:mx-auto lg:last:col-span-1 lg:last:mx-0">
+        <ContactCard info={info} />
+      </div>
     ))}
   </div>
 );

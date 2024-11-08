@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import NavButton from '../Buttons/NavButton';
-import PinkButton0 from '../Buttons/PinkButton1';
-import MainLogo from '@/public/assets/MainLogo';
+import PinkButton0 from '../Buttons/PinkButton0';
+import Image from 'next/image';
+import MainLogo from '@/public/assets/MainLogo.svg';
 import ToggleButton from '../Buttons/ToggleButton';
 import { useAuth } from '@/app/context/AuthContext';
 import { logoutUser } from '@/app/system/api'
@@ -40,7 +41,7 @@ const Header1 = () => {
     { href: '/services', label: 'Service', spacing: 'mr-[21px]' },
     { href: '/gallery', label: 'Gallery', spacing: 'mr-[21px]' },
     { href: '/blog', label: 'Blog', spacing: 'mr-[21px]' },
-    { href: '/contact', label: 'Contact', isPink: true, spacing: 'mr-[21px]'}
+    { href: '/contact', label: 'Contact', isPink: true, spacing: 'mr-[21px]' }
   ];
 
   const renderMenuItem = (item: MenuItem) => {
@@ -67,8 +68,14 @@ const Header1 = () => {
     <header className="w-full relative pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center space-x-1.5 py-4">
-          <div className="flex-shrink-0 pl-8 pt-1">
-            <MainLogo />
+          <div className="flex-shrink-0 pl-9 pt-1">
+            <Image
+              src={MainLogo}
+              alt="Main Logo"
+              width={258}
+              height={41}
+              priority
+            />
           </div>
 
           <nav className="hidden xl:flex items-center pb-1 pr-9">

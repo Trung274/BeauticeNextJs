@@ -1,5 +1,6 @@
 import PinkButton from '@/components/common/Buttons/PinkButton'
-import AnimationSlider from '@/public/assets/AnimationSlider'
+import Image from 'next/image'
+import AnimationSlider from '@/public/assets/AnimationSlider.svg'
 import SliderButton from './SliderButton'
 
 const MainSlider: React.FC = () => (
@@ -17,10 +18,14 @@ const MainSlider: React.FC = () => (
           <PinkButton href='#'>More Details</PinkButton>
         </div>
       </div>
-      <div className='w-full xl:w-1/2 flex justify-items-center justify-center xl:justify-end items-center pt-8 xl:-ml-9 xl:pt-2'> 
-        <div className="w-full md:w-full h-full transform origin-center scale-75 md:scale-100 max-xl:flex max-xl:justify-center">
-          <AnimationSlider />
-        </div>
+      <div className="flex max-md:w-full xl:-ml-9 mt-2 relative xl:right-0 max-xl:justify-center"> 
+        <Image 
+          src={AnimationSlider}
+          alt="Slider animation"
+          width={602}  
+          height={398} 
+          priority
+        />
       </div>
     </div>
 

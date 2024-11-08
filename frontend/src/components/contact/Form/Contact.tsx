@@ -16,7 +16,7 @@ const Contact: React.FC = () => (
                     <span className="block mt-1">customers</span>
                 </div>
                 <div className="w-full max-w-[600px] mx-auto lg:mx-0 mt-10 xl:-ml-2 xl:mt-[133px] relative">
-                    <Image 
+                    <Image
                         src={AnimationContactUs}
                         alt="Contact Us Animation"
                         width={544}
@@ -31,12 +31,12 @@ const Contact: React.FC = () => (
             <div className="w-full lg:w-1/2">
                 <div className="text-base font-light text-[#8B8B8B] mt-9 xl:mr-8 tracking-widest flex justify-center xl:justify-end mb-20">
                     <p className="max-w-[400px]">
-                        Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit ut aliquam, purus sit amet 
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit ut aliquam, purus sit amet
                         luctus venenatis
                     </p>
                 </div>
-                <div className='ml-8'>
+                <div className='flex justify-center xl:justify-start xl:ml-8'>
                     <ContactUsForm />
                 </div>
             </div>

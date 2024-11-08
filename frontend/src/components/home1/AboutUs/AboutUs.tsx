@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ThumbnailAboutUsSVG from './ThumbnailAboutUs'
+import ThumbnailAboutUs from '@/public/assets/ThumbnailAboutUs.svg'
 import NavButton from '@/components/common/Buttons/NavButton'
 import PinkButton from '@/components/common/Buttons/PinkButton'
 import Link from 'next/link'
@@ -47,9 +47,15 @@ const AboutUs = () => (
       </div>
     </div>
 
-    <div className="xl:col-span-5 lg:ml-44 mt-[45px] xl:mr-8 xl:-ml-[98px] flex justify-center xl:justify-end">
-      <div className="w-full h-full transform origin-center scale-50 sm:scale-100 md:scale-100 lg:scale-110 xl:scale-100 -translate-x-15 xl:translate-x-0">
-        <ThumbnailAboutUsSVG />
+    <div className="xl:col-span-5 mt-[45px] xl:mr-8 xl:-ml-[98px] flex justify-center xl:justify-end">
+      <div className="relative w-[280px] h-[336px] sm:w-[477px] sm:h-[573px] md:w-[477px] md:h-[573px] lg:w-[520px] lg:h-[624px] xl:w-[626px] xl:h-[500px]">
+        <Image 
+          src={ThumbnailAboutUs} 
+          alt="About Us Thumbnail"
+          fill
+          priority
+          className="object-contain"
+        />
       </div>
     </div>
   </div>

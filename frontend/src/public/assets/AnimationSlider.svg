@@ -1,10 +1,4 @@
-import React from 'react'
-
-const AnimationSlider: React.FC = () => (
-      <div>
-        <svg width="602" 
-        height="401" 
-        viewBox="0 0 602 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="602" height="401" viewBox="0 0 602 401" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M299.5 42L0 221.5L301 400.5L601.5 221.5L299.5 42Z" fill="#E4E7FF" fill-opacity="0.35"/>
 <path d="M299.5 27L0 206.5L301 385.5L601.5 206.5L299.5 27Z" fill="#E4E7FF" fill-opacity="0.5"/>
 <path d="M299.5 14.5L0 194L301 373L601.5 194L299.5 14.5Z" fill="#E4E7FF" fill-opacity="0.75"/>
@@ -64,8 +58,3 @@ const AnimationSlider: React.FC = () => (
 <path d="M412.553 214L375.5 235.449L405.026 254L441.5 232.551L412.553 214Z" fill="#F9FAFF"/>
 <path d="M374.5 252.864V177.479C374.695 176.706 375.787 175.391 378.594 176.319C382.104 177.479 403.745 190.236 404.33 193.136C404.915 196.035 404.33 196.615 404.33 198.355C404.33 199.746 405.11 248.031 405.5 272" stroke="#B8BFFA" stroke-width="3"/>
 </svg>
-
-      </div>
-    )
-
-export default AnimationSlider

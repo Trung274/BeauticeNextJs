@@ -32,7 +32,7 @@ const mockProfessionals: Professional[] = [
 ];
 
 const ProfessionalTeams: React.FC = () => (
-  <section className="flex flex-col mt-[70px] justify-center space-y-7 text-center font-poppins">
+  <section className="flex flex-col mt-[70px] justify-center space-y-7 text-center">
     <div className="flex flex-col mb-16">
       <div className="text-base font-semibold mt-2 tracking-normal text-[#FF64AE] xl:mr-[79px] xl:mt-[10px]">Our Team</div>
       <h2 className="text-3xl mt-4 sm:text-4xl font-semibold text-[#091156] xl:mr-20 xl:mt-3">We are Professional</h2>
@@ -40,7 +40,7 @@ const ProfessionalTeams: React.FC = () => (
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
       </p>
     </div>
-    <div className="flex flex-col xl:flex-row gap-4 xl:gap-8 justify-center items-center">
+    <div className="grid md:grid-cols-2 gap-4 xl:gap-8 items-center">
       {mockProfessionals.map((professional) => (
         <ProfessionalCard key={professional.id} professional={professional} />
       ))}

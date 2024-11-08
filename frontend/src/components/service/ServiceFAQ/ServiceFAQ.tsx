@@ -17,19 +17,13 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, toggleOpen 
   <div className="faq-item-wrapper">
     <div className={`faq-item ${!isOpen ? '-mb-8' : ''}`}>
       <button
-        className={`w-full pt-[37px] mb-2 text-left flex justify-between items-center ${isOpen ? 'border-b border-[#091156]' : ''}`}
+        className={`w-full pt-[37px] mb-2 text-left flex justify-between items-start ${isOpen ? 'border-b border-[#091156]' : ''}`}
         onClick={toggleOpen}
       >
-        <div className="question-wrapper">
-          <span className="text-lg ml-[34px] tracking-[0.035em] font-medium text-[#091156]">{question}</span>
-        </div>
-        <div className="icon-wrapper">
-          {isOpen ? (
-            <ChevronUp className="text-[#091156] mt-3 mr-5" />
-          ) : (
-            <ChevronDown className="text-[#091156] mt-3 mr-5" />
-          )}
-        </div>
+        <span className="text-lg ml-[34px] tracking-[0.035em] font-medium text-[#091156]">{question}</span>
+        <span className="text-[#091156] mt-3 mr-5 flex-shrink-0">
+          {isOpen ? <ChevronUp /> : <ChevronDown />}
+        </span>
       </button>
       {isOpen && (
         <div className="answer-outer-wrapper">
