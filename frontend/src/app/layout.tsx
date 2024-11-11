@@ -7,7 +7,6 @@ import Header1 from '@/components/common/Header/Header1';
 import Header2 from '@/components/common/Header/Header2';
 import Footer from "@/components/common/Footer/Footer";
 import ScrollTop from '@/components/common/ScrollTop';
-import BgSlider from "@/components/home2/MainSlider/BgSlider";
 import { Providers } from './Providers';
 
 const poppins = Poppins({

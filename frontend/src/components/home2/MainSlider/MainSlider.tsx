@@ -50,4 +50,4 @@ const MainSlider: React.FC = () => (
   </>
 )
 
-export default MainSlider
+export default MainSlider 
