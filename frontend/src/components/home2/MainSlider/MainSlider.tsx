@@ -5,20 +5,21 @@ import Image from 'next/image'
 import WhiteButton from '@/components/common/Buttons/WhiteButton'
 import BgSliderSVG from '@/public/assets/BgSlider.svg'
 import PlayButtonSVG from '@/public/assets/PlayButton.svg'
-import BgSlider from './BgSlider'
 
 const MainSlider: React.FC = () => (
   <>
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-20">
-      <div className="w-full h-full md:min-w-[768px] lg:min-w-[1440px] min-h-[500px] md:min-h-[700px] lg:min-h-[918px]">
-        <BgSlider className="w-full h-full object-cover" />
-      </div>
+        <img 
+          src={BgSliderSVG.src} 
+          alt="Background Slider"
+          className="w-full flex justify-center"
+        />
     </div>
     <div className="flex flex-col justify-center pt-4">
       {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 pt-[90px]">
         {/* Left Content */}
-        <div className="ml-[38px] text-white mb-8 md:mb-0">
+        <div className="xl:ml-[38px] text-white mb-8 md:mb-0">
           <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
             <span className="block">Your beauty center</span>
             <span className="block mt-[12px]">place</span>
@@ -34,7 +35,7 @@ const MainSlider: React.FC = () => (
         </div>
 
         {/* Right Content - Tour Video */}
-        <div className="w-full flex justify-center items-center -ml-[27px] -mt-[10px]">
+        <div className="w-full flex justify-center items-center xl:-ml-[27px] -mt-[10px]">
           <a href="#" className="group w-[58%] md:w-[48%] aspect-square relative">
             <Image
               src={PlayButtonSVG}
