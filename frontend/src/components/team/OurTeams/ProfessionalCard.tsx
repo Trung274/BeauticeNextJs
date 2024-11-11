@@ -41,7 +41,7 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
   };
 
   return (
-    <div className="">
+    <div className="flex items-center justify-center xl:block">
       <div className={`relative w-[424px] h-[626px]`}>
         {/* White background card that appears on hover */}
         <div className={`
@@ -62,7 +62,7 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
           height={146}
           className={`absolute top-[95px] left-1/2 transform -translate-x-1/2 z-10 ${getAvatarPositionClass()}`}
         />
-        <div className={`absolute top-[292px] left-0 right-0 text-center z-10 ${getContentPositionClass()}`}>
+        <div className={`absolute top-[293px] left-0 right-0 text-center z-10 ${getContentPositionClass()}`}>
           <div className="text-base font-semibold text-[#FF64AE]">
             {professional.role}
           </div>

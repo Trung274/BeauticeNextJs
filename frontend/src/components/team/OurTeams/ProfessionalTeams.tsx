@@ -40,7 +40,7 @@ const ProfessionalTeams: React.FC = () => (
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
       </p>
     </div>
-    <div className="grid md:grid-cols-2 gap-4 xl:gap-8 items-center">
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 xl:-ml-[75px] gap-4 xl:gap-[107px] items-center">
       {mockProfessionals.map((professional) => (
         <ProfessionalCard key={professional.id} professional={professional} />
       ))}

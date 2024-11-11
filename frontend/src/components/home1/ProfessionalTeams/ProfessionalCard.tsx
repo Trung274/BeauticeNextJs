@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import FacebookIcon from '../../common/Icons/Facebook';
-import TwitterIcon from '../../common/Icons/Twitter';
-import InstagramIcon from '../../common/Icons/Instagram';
+import FacebookIcon from '@/components/common/Icons/Facebook';
+import TwitterIcon from '@/components/common/Icons/Twitter';
+import InstagramIcon from '@/components/common/Icons/Instagram';
 
 export interface Professional {
   id: number;
@@ -18,7 +18,7 @@ interface ProfessionalCardProps {
   isAnyHovered: boolean;
 }
 
-const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional, isAnyHovered }) => {
+const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => {
   const getAvatarPositionClass = () => {
     switch (professional.position) {
       case 'left':
@@ -41,24 +41,29 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional, isAny
     }
   };
 
-  const getShadowClass = () => {
-    if (professional.position === 'center' && !isAnyHovered) {
-      return 'shadow-[0_25px_50px_25px_rgba(246,247,255,1)]';
-    }
-    return 'hover:shadow-[0_25px_50px_25px_rgba(246,247,255,1)]';
-  };
-
   return (
-    <div className="w-full">
-      <div className={`relative w-full max-w-[424px] mx-auto h-[626px] bg-white rounded-[42px] transition-shadow duration-300 ${getShadowClass()}`}>
+    <div className="flex items-center justify-center xl:block">
+      <div className={`relative w-[424px] h-[626px]`}>
+        {/* White background card that appears on hover */}
+        <div className={`
+          absolute w-[424px] h-[626px] top-0 
+          bg-white rounded-[42px] opacity-0 
+          group-hover:opacity-100 group-hover:drop-shadow-[0_8px_30px_rgba(0,0,0,0.05)]
+          transition-all duration-300 z-0
+          ${professional.position === 'left' ? 'left-[49px]' : 
+            professional.position === 'right' ? 'right-[49px]' : 
+            'left-0'}
+        `} />
+        
+        {/* Content */}
         <Image
           src={professional.avatarSrc}
           alt={professional.role}
           width={146}
           height={146}
-          className={`absolute top-[95px] left-1/2 transform -translate-x-1/2 ${getAvatarPositionClass()}`}
+          className={`absolute top-[95px] left-1/2 transform -translate-x-1/2 z-10 ${getAvatarPositionClass()}`}
         />
-        <div className={`absolute top-[292px] left-0 right-0 text-center ${getContentPositionClass()}`}>
+        <div className={`absolute top-[293px] left-0 right-0 text-center z-10 ${getContentPositionClass()}`}>
           <div className="text-base font-semibold text-[#FF64AE]">
             {professional.role}
           </div>

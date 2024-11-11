@@ -46,7 +46,7 @@ const ProfessionalTeams: React.FC = () => {
         </p>
       </div>
       <div 
-        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 xl:gap-14"
+        className="grid md:grid-cols-2 xl:grid-cols-3 xl:-ml-[75px] gap-4 xl:gap-[107px] items-center"
         onMouseEnter={() => setIsAnyHovered(true)}
         onMouseLeave={() => setIsAnyHovered(false)}
       >

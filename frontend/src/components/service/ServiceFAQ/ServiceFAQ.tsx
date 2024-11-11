@@ -20,7 +20,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, toggleOpen 
         className={`w-full pt-[37px] mb-2 text-left flex justify-between items-start ${isOpen ? 'border-b border-[#091156]' : ''}`}
         onClick={toggleOpen}
       >
-        <span className="text-lg ml-[34px] tracking-[0.035em] font-medium text-[#091156]">{question}</span>
+        <span className="text-lg ml-[34px] tracking-[0.035em] font-medium text-[#091156] flex-grow">{question}</span>
         <span className="text-[#091156] mt-3 mr-5 flex-shrink-0">
           {isOpen ? <ChevronUp /> : <ChevronDown />}
         </span>
@@ -51,7 +51,13 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, toggleOpen 
 );
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);  
+
+  const handleToggle = (index: number) => {
+    return () => {  
+      setOpenIndex(openIndex === index ? null : index);
+    };
+  };
 
   return (
     <div className="faq-container max-w-[1003px] mx-auto px-4">
@@ -79,7 +85,7 @@ const FAQ = () => {
             question={item.question}
             answer={item.answer}
             isOpen={index === openIndex}
-            toggleOpen={() => setOpenIndex(index === openIndex ? -1 : index)}
+            toggleOpen={handleToggle(index)}
           />
         ))}
       </div>

@@ -64,27 +64,14 @@ const loginUser = async (req, res) => {
         }
 
         // If we get here, login is successful
-        jwt.sign(
-            {email: user.email, id: user._id, name:user.name}, 
-            process.env.JWT_SECRET, 
-            {}, 
-            (err, token) => {
-                if(err) throw err;
-                res.cookie('token', token, {
-                    httpOnly: true,
-                    secure: true, // Required for production
-                    sameSite: 'None', // Required for cross-domain
-                    maxAge: 24 * 60 * 60 * 1000, // 24 hours
-                    path: '/', // Make sure cookie is accessible everywhere
-                    domain: process.env.NODE_ENV === 'production' 
-                        ? '.onrender.com'  // Adjust this to match your domain
-                        : 'localhost'
-                }).json({
-                    success: true,
-                    user
-                });
-            }
-        );
+        jwt.sign({email: user.email, id: user._id, name:user.name}, process.env.JWT_SECRET, {}, (err, token) => {
+            if(err) throw err;
+            res.cookie('token', token).json({
+                success: true,
+                user
+            });
+        });
+        
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: "An error occurred during login" });

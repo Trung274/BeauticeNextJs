@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import NavButton from '../Buttons/NavButton';
 import PinkButton0 from '../Buttons/PinkButton0';
 import Image from 'next/image';
+import Link from 'next/link';
 import MainLogo from '@/public/assets/MainLogo.svg';
 import ToggleButton from '../Buttons/ToggleButton';
 import { useAuth } from '@/app/context/AuthContext';
@@ -68,7 +69,8 @@ const Header1 = () => {
     <header className="w-full relative pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center space-x-1.5 py-4">
-          <div className="flex-shrink-0 pl-9 pt-1">
+          <div className="flex-shrink-0 xl:pl-9 pt-1">
+          <Link href="/">
             <Image
               src={MainLogo}
               alt="Main Logo"
@@ -76,6 +78,7 @@ const Header1 = () => {
               height={41}
               priority
             />
+            </Link>
           </div>
 
           <nav className="hidden xl:flex items-center pb-1 pr-9">
@@ -110,7 +113,7 @@ const Header1 = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-y-0 right-0 w-80 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           } xl:hidden`}
       >
         <div className="flex flex-col h-full">
