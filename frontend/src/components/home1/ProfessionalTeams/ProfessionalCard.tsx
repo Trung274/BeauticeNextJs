@@ -43,16 +43,17 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({ professional }) => 
 
   return (
     <div className="flex items-center justify-center xl:block">
-      <div className={`relative w-[424px] h-[626px]`}>
+      <div className={`relative w-[95%] md:w-[424px] h-[626px] mx-auto`}>
         {/* White background card that appears on hover */}
         <div className={`
-          absolute w-[424px] h-[626px] top-0 
+          absolute w-[95%] md:w-[424px] h-[626px] top-0 
           bg-white rounded-[42px] opacity-0 
           group-hover:opacity-100 group-hover:drop-shadow-[0_8px_30px_rgba(0,0,0,0.05)]
           transition-all duration-300 z-0
-          ${professional.position === 'left' ? 'left-[49px]' : 
-            professional.position === 'right' ? 'right-[49px]' : 
+          ${professional.position === 'left' ? 'md:left-[49px]' : 
+            professional.position === 'right' ? 'md:right-[49px]' : 
             'left-0'}
+          left-0 right-0 mx-auto
         `} />
         
         {/* Content */}

@@ -19,13 +19,13 @@ const Article: React.FC = () => {
   const paginate = (pageNumber: number) => dispatch(setCurrentPage(pageNumber));
 
   return (
-    <div className="flex flex-col space-y-[127px] mt-6 xl:ml-[5px] h-full">
+    <div className="flex flex-col xl:space-y-[127px] mt-6 xl:ml-[5px] h-full">
       {currentArticles.map((article, index) => (
         <div key={index} className="h-full">
           <BlogArticle article={article} />
         </div>
       ))}
-      <div className="flex justify-center xl:justify-end space-x-5 mr-[152px]">
+      <div className="flex justify-center xl:justify-end space-x-5 xl:mr-[152px]">
         <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
       </div>
     </div>

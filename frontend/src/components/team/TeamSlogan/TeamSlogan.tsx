@@ -29,8 +29,8 @@ const TeamSlogan: React.FC = () => {
         </div>
 
         {/* Lower content section */}
-        <div className="absolute inset-x-0 top-[60%] sm:top-[65%] md:top-[70%] pointer-events-auto">
-          <div className="text-sm sm:text-base font-light tracking-widest text-center text-[#CACACA] max-w-2xl mx-auto px-4 -mt-[92px]">
+        <div className="absolute inset-x-0 bottom-[20%] sm:bottom-[25%] md:top-[70%] pointer-events-auto">
+          <div className="text-sm sm:text-base font-light tracking-widest text-center text-[#CACACA] max-w-2xl mx-auto px-4 md:-mt-[92px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             <br className="hidden sm:block" /> purus sit amet luctus venenatis
           </div>

@@ -4,7 +4,7 @@ import ThumbnailTitle from '@/public/assets/Tittle.svg'
 
 const Title: React.FC = () => {
   return (
-    <div className="relative w-screen mt-[10px] sm:mt-[10px] left-1/2 right-1/2 mx-[-50vw]">
+    <div className="relative w-screen mt-[10px] sm:mt-[10px] left-1/2 right-1/2 mx-[-50vw] -z-10">
       <div className="relative">
         <Image
           src={ThumbnailTitle}

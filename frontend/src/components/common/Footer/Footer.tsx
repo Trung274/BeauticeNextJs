@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => (
 
         {/* Social icon + copyright */}
         <div className="flex flex-col xl:flex-row justify-between items-center gap-4 mb-10 pt-8 w-full -mt-10 -ml-7">
-          <div className="flex gap-x-7 sm:gap-x-11 ml-1 mt-1 sm:mb-0 flex-wrap justify-center">
+          <div className="flex gap-x-7 sm:gap-x-11 xl:ml-1 mt-1 sm:mb-0 flex-wrap justify-center">
             <FacebookWhite />
             <TwitterWhite />
             <LinkedinWhite />

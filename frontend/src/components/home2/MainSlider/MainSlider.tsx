@@ -8,12 +8,12 @@ import PlayButtonSVG from '@/public/assets/PlayButton.svg'
 
 const MainSlider: React.FC = () => (
   <>
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-20">
-        <img 
-          src={BgSliderSVG.src} 
-          alt="Background Slider"
-          className="w-full flex justify-center"
-        />
+    <div className="absolute top-0 left-0 w-full -z-20">
+      <img 
+        src={BgSliderSVG.src} 
+        alt="Background Slider"
+        className="w-full min-h-[100vh] xl:min-h-fit object-cover xl:object-fill"
+      />
     </div>
     <div className="flex flex-col justify-center pt-4">
       {/* Content */}
@@ -50,4 +50,4 @@ const MainSlider: React.FC = () => (
   </>
 )
 
-export default MainSlider 
+export default MainSlider
