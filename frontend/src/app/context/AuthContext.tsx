@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getProfile, logoutUser } from '../system/api';
 
 export type User = {
-  id: string;
+  _id: string;
   name: string;
   email: string;
 } | null;
@@ -13,7 +13,7 @@ export type AuthContextType = {
   user: User;
   isLoading: boolean;
   login: (userData: User) => void;
-  logout: () => void;
+  logout: () => Promise<void>;
 };
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -23,20 +23,45 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    getProfile()
-      .then(setUser)
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
+    const fetchUser = async () => {
+      try {
+        // Check if token exists in cookies
+        const cookies = document.cookie.split(';');
+        const hasToken = cookies.some(cookie => cookie.trim().startsWith('token='));
+
+        if (!hasToken) {
+          setIsLoading(false);
+          return;
+        }
+
+        setIsLoading(true);
+        const userData = await getProfile();
+        setUser(userData);
+      } catch (error) {
+        console.error('Failed to fetch user profile:', error);
+        setUser(null);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchUser();
   }, []);
 
   const login = (userData: User) => {
-    setUser(userData);
+    if (userData) {
+      setUser(userData);
+    }
   };
 
   const logout = async () => {
-    await logoutUser();
-    setUser(null);
+    try {
+      await logoutUser();
+      setUser(null);
+    } catch (error) {
+      console.error('Logout failed:', error);
+      throw error;
+    }
   };
 
   return (

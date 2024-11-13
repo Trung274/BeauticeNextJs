@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
 import { loginUser } from '@/app/system/api';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/app/context/AuthContext';
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -18,6 +19,7 @@ type LoginFormData = z.infer<typeof loginSchema>;
 
 const Login = () => {
   const router = useRouter();
+  const { login } = useAuth();
   const {
     register,
     handleSubmit,
@@ -28,7 +30,7 @@ const Login = () => {
 
   const mutation = useMutation({
     mutationFn: loginUser,
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
       // Check if the response contains an error
       if (data.error) {
         console.error('Login failed:', data.error);
@@ -37,8 +39,9 @@ const Login = () => {
       
       // Only proceed if login was actually successful
       if (data.success) {
+        login(data.user);
         console.log('Login successful', data);
-        router.push('/');
+        router.push('/profile');
       }
     },
     onError: (error) => {
