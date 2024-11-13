@@ -21,12 +21,12 @@ export default function blog() {
 
                     {/* 2nd column */}
                     <div className="p-3 order-1 xl:order-2 flex flex-col items-center xl:items-start">
-                        <div className="w-full md:max-w-5xl max-w-md xl:max-w-none">
-                            <div className="md:float-left md:w-1/2 xl:float-none xl:w-full flex flex-col items-center xl:items-start">
+                        <div className="w-full md:max-w-5xl max-w-md xl:max-w-none md:flex md:gap-8 xl:block">
+                            <div className="md:w-1/2 xl:w-full flex flex-col items-center xl:items-start">
                                 <Search />
                                 <Post />
                             </div>
-                            <div className="md:float-right md:w-1/2 xl:float-none xl:w-full">
+                            <div className="md:w-1/2 xl:w-full">
                                 <Categories />
                                 <Tags />
                                 {/* <Connect /> */}
