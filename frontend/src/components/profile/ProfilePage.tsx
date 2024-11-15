@@ -3,17 +3,40 @@
 import React from 'react';
 import { useAuth } from '@/app/context/AuthContext';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { getProfile } from '@/app/system/api';
 
 const ProfilePage = () => {
-  const { user, logout, isLoading } = useAuth();
+  const { user, logout, isLoading, login } = useAuth();
   const router = useRouter();
+  const [isProfileLoading, setIsProfileLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const userData = await getProfile();
+        login(userData);
+      } catch (error) {
+        console.error('Failed to fetch profile:', error);
+        router.push('/auth/login');
+      } finally {
+        setIsProfileLoading(false);
+      }
+    };
+
+    if (!user) {
+      fetchProfile();
+    } else {
+      setIsProfileLoading(false);
+    }
+  }, []);
 
   const handleLogout = async () => {
     await logout();
     router.push('/login'); // Redirect to login page after logout
   };
 
-  if (isLoading) {
+  if (isProfileLoading) {
     return <div>Loading...</div>;
   }
 

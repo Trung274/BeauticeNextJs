@@ -20,7 +20,7 @@ type MenuItem = {
 const Header1 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { user, logout } = useAuth();
+  const { user, hasToken, logout } = useAuth();
   const router = useRouter();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -70,28 +70,27 @@ const Header1 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center space-x-1.5 py-4">
           <div className="flex-shrink-0 xl:pl-9 pt-1">
-          <Link href="/">
-            <Image
-              src={MainLogo}
-              alt="Main Logo"
-              width={258}
-              height={41}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src={MainLogo}
+                alt="Main Logo"
+                width={258}
+                height={41}
+                priority
+              />
             </Link>
           </div>
 
           <nav className="hidden xl:flex items-center pb-1 pr-9">
             {menuItems.map(renderMenuItem)}
-            {user ? (
+            {hasToken ? (
               <div className="relative">
                 <button onClick={toggleDropdown} className="flex items-center space-x-2">
-                  <img
-                    src={avatarUrl}
-                    alt="User Avatar"
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <span>{user.name}</span>
+                  <div className="w-10 h-10 rounded-full bg-[#FF64AE] flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
                 </button>
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
@@ -112,10 +111,8 @@ const Header1 = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed inset-y-0 right-0 w-80 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          } xl:hidden`}
-      >
+      <div className={`fixed inset-y-0 right-0 w-80 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } xl:hidden`}>
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-4">
             <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-600">
@@ -135,7 +132,7 @@ const Header1 = () => {
                   )}
                 </li>
               ))}
-              {user ? (
+              {hasToken ? (
                 <>
                   <li>
                     <a href="/profile" className="block py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>

@@ -11,6 +11,7 @@ export type User = {
 
 export type AuthContextType = {
   user: User;
+  hasToken: boolean;
   isLoading: boolean;
   login: (userData: User) => void;
   logout: () => Promise<void>;
@@ -20,37 +21,24 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User>(null);
+  const [hasToken, setHasToken] = useState(false); //Token check
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        // Check if token exists in cookies
-        const cookies = document.cookie.split(';');
-        const hasToken = cookies.some(cookie => cookie.trim().startsWith('token='));
-
-        if (!hasToken) {
-          setIsLoading(false);
-          return;
-        }
-
-        setIsLoading(true);
-        const userData = await getProfile();
-        setUser(userData);
-      } catch (error) {
-        console.error('Failed to fetch user profile:', error);
-        setUser(null);
-      } finally {
-        setIsLoading(false);
-      }
+    const checkToken = () => {
+      const cookies = document.cookie.split(';');
+      const tokenExists = cookies.some(cookie => cookie.trim().startsWith('token='));
+      setHasToken(tokenExists);
+      setIsLoading(false);
     };
 
-    fetchUser();
+    checkToken();
   }, []);
 
   const login = (userData: User) => {
     if (userData) {
       setUser(userData);
+      setHasToken(true);
     }
   };
 
@@ -58,6 +46,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       await logoutUser();
       setUser(null);
+      setHasToken(false);
     } catch (error) {
       console.error('Logout failed:', error);
       throw error;
@@ -65,7 +54,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, login, logout }}>
+    <AuthContext.Provider value={{ user, hasToken, isLoading, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
